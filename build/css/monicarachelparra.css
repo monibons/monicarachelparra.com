@@ -6,13 +6,25 @@ body,
   font-family: 'Lato', sans-serif;
   -webkit-font-smoothing: antialiased;
 }
+#particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9;
+}
+@media (max-width: 480px) {
+  #particles {
+    display: none;
+  }
+}
 .page-home .title-hero {
   text-align: center;
   padding: 140px 40px 80px 40px;
-  background-color: #FFE53B;
-  background-image: -webkit-linear-gradient(57deg, #fcc566 5%, #ff5447 74%);
-  background-image: -o-linear-gradient(57deg, #fcc566 5%, #ff5447 74%);
-  background-image: linear-gradient(147deg, #fcc566 5%, #ff5447 74%);
+  background: linear-gradient(45deg, #ffcd77, #ff834f, #ff5447, #ff834f, #ffcd77);
+  background-size: 300% 100%;
+  -webkit-animation: AnimationName 20s ease infinite;
+  -moz-animation: AnimationName 20s ease infinite;
+  animation: AnimationName 20s ease infinite;
 }
 .page-home .title-hero h2 {
   font-size: 54px;
@@ -65,10 +77,45 @@ body,
   border-radius: 40px;
   padding: 14px 40px;
   text-decoration: none;
+  position: relative;
+  z-index: 10;
 }
 .page-home .title-hero a:hover {
   background-color: white;
   color: black;
+}
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 .page-home .recent-banner {
   text-align: center;
@@ -141,9 +188,9 @@ body,
 }
 .top-nav {
   background-color: #FFE53B;
-  background-image: -webkit-linear-gradient(57deg, #fcc566 0%, #ff5447 65%);
-  background-image: -o-linear-gradient(57deg, #fcc566 0%, #ff5447 65%);
-  background-image: linear-gradient(147deg, #fcc566 0%, #ff5447 65%);
+  background-image: -webkit-linear-gradient(57deg, #ffcd77 0%, #ff5447 65%);
+  background-image: -o-linear-gradient(57deg, #ffcd77 0%, #ff5447 65%);
+  background-image: linear-gradient(147deg, #ffcd77 0%, #ff5447 65%);
   padding: 20px;
   text-align: center;
 }
@@ -154,7 +201,7 @@ body,
   padding: 5px 0;
 }
 .top-nav small {
-  color: #fcc566;
+  color: #ffcd77;
 }
 .top-nav .back-btn a {
   position: absolute;
