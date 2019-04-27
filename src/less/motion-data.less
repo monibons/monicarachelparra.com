@@ -1,4 +1,58 @@
+@import 'variables';
 @import 'data-particles';
+
+.page-motion-data {
+	background-color: black;
+	height: 100%;
+	padding: 0;
+	margin: 0 auto;
+	text-align: center;
+
+	img {
+		margin: 0 auto;
+		max-width: 1280px;
+	}
+	.title-hero {
+		text-align: center;
+		padding: 80px 40px 80px 40px;
+		color: white;
+		min-height: 480px;
+		h2 {
+			font-size: 48px;
+		}
+		p {
+			font-size: 21px;
+			line-height: 29px;
+			max-width: 640px;
+			margin: 0 auto;
+			font-weight: 300;
+			color: @text-color;
+		}
+		.concepts {
+			display: flex;
+			flex-direction: column;
+			padding: 80px 0;
+			max-width: 860px;
+			margin: 0 auto;
+			justify-content: center;
+			.item {
+				padding: 20px 0 40px 0;
+				border-bottom: 1px solid fade(white,15%);
+				a {
+					color: @mp-mango;
+					text-decoration: none;
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+				small {
+					color: @text-color;
+				}
+			}
+		}
+	}
+}
+
 
 .intro {
 	position: fixed;

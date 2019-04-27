@@ -75,7 +75,7 @@ body,
   background-color: black;
   color: white;
   border-radius: 40px;
-  padding: 14px 40px;
+  padding: 12px 40px 14px 40px;
   text-decoration: none;
   position: relative;
   z-index: 10;
@@ -86,6 +86,9 @@ body,
   -webkit-transition: background-color 200ms linear;
   -ms-transition: background-color 200ms linear;
   transition: background-color 200ms linear;
+}
+.page-home .title-hero a:last-of-type {
+  margin-left: 16px;
 }
 @-webkit-keyframes HeroGradient {
   0% {
@@ -184,6 +187,11 @@ body,
   font-size: 21px;
   font-weight: 700;
   padding: 20px 0 0 0;
+}
+.page-home .all-work p {
+  margin: 0;
+  padding: 0 0 20px 0;
+  color: #2b4b55;
 }
 .page-home .all-work .grid {
   display: flex;
@@ -6311,6 +6319,56 @@ body,
   100% {
     transform: rotateZ(-336deg) rotateY(173deg) translateX(900px) rotateZ(336deg);
   }
+}
+.page-motion-data {
+  background-color: black;
+  height: 100%;
+  padding: 0;
+  margin: 0 auto;
+  text-align: center;
+}
+.page-motion-data img {
+  margin: 0 auto;
+  max-width: 1280px;
+}
+.page-motion-data .title-hero {
+  text-align: center;
+  padding: 80px 40px 80px 40px;
+  color: white;
+  min-height: 480px;
+}
+.page-motion-data .title-hero h2 {
+  font-size: 48px;
+}
+.page-motion-data .title-hero p {
+  font-size: 21px;
+  line-height: 29px;
+  max-width: 640px;
+  margin: 0 auto;
+  font-weight: 300;
+  color: #abcad4;
+}
+.page-motion-data .title-hero .concepts {
+  display: flex;
+  flex-direction: column;
+  padding: 80px 0;
+  max-width: 860px;
+  margin: 0 auto;
+  justify-content: center;
+}
+.page-motion-data .title-hero .concepts .item {
+  padding: 20px 0 40px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+.page-motion-data .title-hero .concepts .item a {
+  color: #ffcd77;
+  text-decoration: none;
+}
+.page-motion-data .title-hero .concepts .item a:hover {
+  text-decoration: underline;
+}
+.page-motion-data .title-hero .concepts .item small {
+  color: #abcad4;
 }
 .intro {
   position: fixed;

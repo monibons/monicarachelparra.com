@@ -68,7 +68,7 @@ body,
       background-color: black;
       color: white;
       border-radius: 40px;
-      padding: 14px 40px;
+      padding: 12px 40px 14px 40px;
       text-decoration: none;
       position: relative;
       z-index: 10;
@@ -76,6 +76,9 @@ body,
         background-color: white;
         color: black;
         .animationButton();
+      }
+      &:last-of-type {
+        margin-left: 16px;
       }
     }
   }
@@ -170,6 +173,11 @@ body,
       font-size: 21px;
       font-weight: 700;
       padding: 20px 0 0 0;
+    }
+    p {
+      margin: 0;
+      padding: 0 0 20px 0;
+      color: darken(@text-color, 50%);
     }
     .grid {
       display: flex;
