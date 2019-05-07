@@ -22,7 +22,7 @@ body,
 .page-home {
   .title-hero {
     text-align: center;
-    padding: 140px 40px 80px 40px;
+    padding: 120px 40px 80px 40px;
     background: linear-gradient(45deg, @mp-mango, @mp-peach, @mp-papaya, @mp-peach,@mp-mango);
     background-size: 300% 100%;
     -webkit-animation: HeroGradient 20s ease infinite;
@@ -45,12 +45,20 @@ body,
 
     }
     p {
-      font-size: 17px;
-      color: white;
-      padding-bottom: 40px;
-      letter-spacing: .04em;
+      font-size: 19px;
+      color: @mp-mango;
+      letter-spacing: .03em;
+      padding-top: 20px;
       strong {
-        font-weight: 900;
+        font-weight: 700;
+        color: white;
+      }
+      & + p {
+        font-size: 15px;
+        padding: 0 0 60px 0;
+        strong {
+          font-weight: 400;
+        }
       }
     }
     .areas-of-focus {
