@@ -8,9 +8,23 @@
 	margin: 0 auto;
 	text-align: center;
 
+	.spacer {
+		background-color: #1D2026;
+		padding: 40px 0;
+		display: none;
+		z-index: 16px;
+		@media (max-width: 480px) {
+			display: block;
+		}
+	}
+
 	img {
 		margin: 0 auto;
 		max-width: 1280px;
+		width: 100%;
+		@media (max-width: 480px) {
+			margin-top: 60px;
+		}
 	}
 	.title-hero {
 		text-align: center;
@@ -19,6 +33,10 @@
 		min-height: 480px;
 		h2 {
 			font-size: 48px;
+			@media (max-width: 480px) {
+				font-size: 36px;
+				line-height: 40px;
+			}
 		}
 		p {
 			font-size: 21px;
