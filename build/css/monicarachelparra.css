@@ -178,7 +178,7 @@ body,
 }
 .page-home .highlight.primary {
   background-color: rgba(171, 202, 212, 0.55);
-  max-height: 640px;
+  max-height: 600px;
   overflow-y: hidden;
 }
 .page-home .all-work {
@@ -186,7 +186,7 @@ body,
   text-align: center;
   display: flex;
   flex-direction: column;
-  background-color: rgba(171, 202, 212, 0.2);
+  background-color: rgba(171, 202, 212, 0.3);
   justify-content: center;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -273,7 +273,7 @@ body,
 .portfolio-detail {
   padding: 80px 40px;
   text-align: center;
-  background-color: rgba(171, 202, 212, 0.15);
+  background-color: rgba(171, 202, 212, 0.25);
 }
 .portfolio-detail h2 {
   color: #2b4b55;
