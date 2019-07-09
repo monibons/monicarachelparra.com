@@ -33,7 +33,7 @@ body,
 
     h2 {
       font-size: 54px;
-      font-weight: 300;
+      font-weight: 200;
       color: white;
       text-transform: uppercase;
       margin: 0;
@@ -45,7 +45,7 @@ body,
 
     }
     p {
-      font-size: 19px;
+      font-size: 21px;
       color: @mp-mango;
       letter-spacing: .03em;
       padding-top: 20px;
@@ -146,14 +146,15 @@ body,
     z-index: 12;
   }
   .highlight {
-    padding: 60px 40px 40px;
+    padding: 80px 40px 40px;
     text-align: center;
     position: relative;
     z-index: 11;
+    background-color: #4D68A2;
+    color: white;
 
     a {
-      text-transform: uppercase;
-      color: darken(@text-color, 50%);
+      color: white;
       text-decoration: none;
       font-size: 21px;
       font-weight: 700;
@@ -162,18 +163,25 @@ body,
       }
     }
     p {
-      color: darken(@text-color, 50%);
       font-size: 17px;
-      padding-bottom: 40px;
+      padding-bottom: 20px;
     }
     img {
       max-width: 940px;
       width: 100%;
     }
     &.primary {
-      background-color: fade(@text-color,55%);
+      background-color: fade(#4D68A2,30%);
       max-height: 600px;
       overflow-y: hidden;
+      border-bottom: 1px solid @text-color;
+
+      a, p {
+        color: darken(@text-color, 50%);
+      }
+      p {
+        margin-bottom: 40px;
+      }
     }
   }
   .all-work {
@@ -181,7 +189,7 @@ body,
     text-align: center;
     display: flex;
     flex-direction: column;
-    background-color: fade(@text-color,30%);
+    // background-color: fade(@text-color,30%);
     justify-content: center;
     box-sizing:border-box;
     -moz-box-sizing:border-box;
@@ -194,11 +202,12 @@ body,
       color: darken(@text-color, 50%);
       font-size: 21px;
       font-weight: 700;
-      padding: 20px 0 0 0;
+      padding: 40px 0 0 0;
     }
     p {
       margin: 0;
-      padding: 0 0 20px 0;
+      font-size: 19px;
+      padding: 0 0 40px 0;
       color: darken(@text-color, 50%);
     }
     .grid {

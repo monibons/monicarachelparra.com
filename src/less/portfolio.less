@@ -42,18 +42,21 @@ background-image: linear-gradient(147deg, @mp-mango 0%, @mp-papaya 65%);
 .portfolio-detail {
   padding: 80px 40px;
   text-align: center;
-  background-color: fade(@text-color,25%);
+  background-color: fade(#4D68A2,12%);
   h2 {
     color: darken(@text-color, 50%);
     font-size: 21px;
     font-weight: 700;
-    text-transform: uppercase;
   }
   p {
     color: darken(@text-color, 50%);
     font-size: 17px;
-    padding: 20px 0 40px;
+    padding: 20px 0 20px;
     line-height: 25px;
+
+    &:first-of-type {
+      padding-top: 40px;
+    }
   }
   a {
     position: relative;
@@ -79,6 +82,7 @@ background-image: linear-gradient(147deg, @mp-mango 0%, @mp-papaya 65%);
     max-width: 940px;
     width: 100%;
     margin-bottom: 40px;
+    padding-top: 20px;
   }
   #player {
     max-width: 960px;
