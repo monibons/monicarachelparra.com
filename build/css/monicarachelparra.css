@@ -324,6 +324,15 @@ body,
   margin-bottom: 40px;
   padding-top: 20px;
 }
+.portfolio-detail .wrapper {
+  display: flex;
+  justify-content: center;
+}
+.portfolio-detail .wrapper img.two-col {
+  width: 40%;
+  height: 40%;
+  padding: 20px;
+}
 .portfolio-detail #player {
   max-width: 960px;
   width: 100%;
