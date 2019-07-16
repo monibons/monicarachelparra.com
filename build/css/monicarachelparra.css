@@ -20,7 +20,7 @@ body,
 }
 .page-home .title-hero {
   text-align: center;
-  padding: 120px 40px 80px 40px;
+  padding: 80px 40px 80px 40px;
   background: linear-gradient(45deg, #ffcd77, #ff834f, #ff5447, #ff834f, #ffcd77);
   background-size: 300% 100%;
   -webkit-animation: HeroGradient 20s ease infinite;
@@ -71,7 +71,7 @@ body,
   width: 80%;
   justify-content: center;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
-  margin-top: 80px;
+  margin-top: 40px;
 }
 .page-home .title-hero .areas-of-focus h3 {
   text-transform: uppercase;
@@ -84,31 +84,6 @@ body,
 @media (max-width: 480px) {
   .page-home .title-hero .areas-of-focus h3 {
     padding: 20px 40px;
-  }
-}
-.page-home .title-hero a {
-  background-color: black;
-  color: white;
-  border-radius: 40px;
-  padding: 12px 40px 14px 40px;
-  text-decoration: none;
-  position: relative;
-  z-index: 10;
-}
-.page-home .title-hero a:hover {
-  background-color: white;
-  color: black;
-  -webkit-transition: background-color 200ms linear;
-  -ms-transition: background-color 200ms linear;
-  transition: background-color 200ms linear;
-}
-.page-home .title-hero a:last-of-type {
-  margin-left: 16px;
-}
-@media (max-width: 480px) {
-  .page-home .title-hero a:last-of-type {
-    margin: 40px 0 0 0;
-    display: inline-flex;
   }
 }
 @-webkit-keyframes HeroGradient {
@@ -215,13 +190,27 @@ body,
   color: #2b4b55;
   font-size: 21px;
   font-weight: 700;
-  padding: 40px 0 0 0;
+  padding: 10px 0 0 0;
 }
 .page-home .all-work p {
   margin: 0;
   font-size: 19px;
   padding: 0 0 40px 0;
   color: #2b4b55;
+}
+.page-home .all-work p.contact-me {
+  font-size: 15px;
+  font-weight: 600;
+  border-bottom: 1px solid #abcad4;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+.page-home .all-work p.contact-me a {
+  color: #5983cb;
+  text-decoration: none;
+}
+.page-home .all-work p.contact-me a:hover {
+  text-decoration: underline;
 }
 .page-home .all-work .grid {
   display: flex;

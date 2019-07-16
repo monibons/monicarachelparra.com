@@ -22,7 +22,7 @@ body,
 .page-home {
   .title-hero {
     text-align: center;
-    padding: 120px 40px 80px 40px;
+    padding: 80px 40px 80px 40px;
     background: linear-gradient(45deg, @mp-mango, @mp-peach, @mp-papaya, @mp-peach,@mp-mango);
     background-size: 300% 100%;
     -webkit-animation: HeroGradient 20s ease infinite;
@@ -69,7 +69,7 @@ body,
       width: 80%;
       justify-content: center;
       border-top: 1px solid fade(white,50%);
-      margin-top: 80px;
+      margin-top: 40px;
       h3 {
         text-transform: uppercase;
         padding: 40px;
@@ -79,28 +79,6 @@ body,
         letter-spacing: .05em;
 
         @media (max-width: 480px) { padding: 20px 40px; }
-      }
-    }
-    a {
-      background-color: black;
-      color: white;
-      border-radius: 40px;
-      padding: 12px 40px 14px 40px;
-      text-decoration: none;
-      position: relative;
-      z-index: 10;
-
-      &:hover {
-        background-color: white;
-        color: black;
-        .animationButton();
-      }
-      &:last-of-type {
-        margin-left: 16px;
-        @media (max-width: 480px) {
-          margin: 40px 0 0 0;
-          display: inline-flex;
-        }
       }
     }
   }
@@ -202,13 +180,29 @@ body,
       color: darken(@text-color, 50%);
       font-size: 21px;
       font-weight: 700;
-      padding: 40px 0 0 0;
+      padding: 10px 0 0 0;
     }
     p {
       margin: 0;
       font-size: 19px;
       padding: 0 0 40px 0;
       color: darken(@text-color, 50%);
+    }
+    p.contact-me {
+      font-size: 15px;
+      font-weight: 600;
+      border-bottom: 1px solid @text-color;
+      margin: 0 auto;
+      padding-top: 40px;
+
+      a {
+        color: #5983cb;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
     .grid {
       display: flex;
