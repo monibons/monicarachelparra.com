@@ -172,7 +172,7 @@ body,
     }
     &.primary {
       background-color: fade(#4D68A2,30%);
-      max-height: 600px;
+      max-height: 560px;
       overflow-y: hidden;
       border-bottom: 1px solid @text-color;
 
@@ -185,12 +185,12 @@ body,
     }
   }
   .all-work {
-    padding: 0 40px;
+    padding: 0;
     text-align: center;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    // background-color: fade(@text-color,30%);
-    justify-content: center;
+    justify-content: space-around;
     box-sizing:border-box;
     -moz-box-sizing:border-box;
     -webkit-box-sizing:border-box;
@@ -215,13 +215,16 @@ body,
       flex-wrap: wrap;
       flex-direction: row;
       width: 100%;
-      margin: 0 auto;
-      justify-content: start;
+      justify-content: center;
 
       .grid-item {
         width: 300px;
         height: 200px;
         padding: 20px;
+
+        img.border {
+          border: 1px solid fade(@text-color,55%);
+        }
       }
     }
   }
