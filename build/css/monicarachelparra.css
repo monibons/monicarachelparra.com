@@ -8,12 +8,12 @@ body,
 }
 .page-home .hero {
   padding: 80px 40px 100px 100px;
-  background: #ffca67;
-  background: linear-gradient(90deg, #ff0176 0%, #ffca67 100%);
+  background: #890eff;
+  background: linear-gradient(124deg, #890eff 0%, #fe1dca 100%);
 }
-@media (max-width: 480px) {
+@media (max-width: 500px) {
   .page-home .hero {
-    padding-top: 100px;
+    padding: 80px 4 0px 100px 40px;
   }
 }
 .page-home .hero .badge {
@@ -21,27 +21,30 @@ body,
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  position: absolute;
-  right: 40px;
+  position: fixed;
+  right: 0;
   top: 40px;
   padding: 10px 8px 10px 10px;
   background-color: black;
   transition: width .5s ease;
   overflow: hidden;
+  z-index: 10;
   cursor: pointer;
 }
 .page-home .hero .badge::before {
   opacity: 0;
   content: 'monica rachel parra';
   transition: opacity .5s ease;
+  text-transform: uppercase;
+  font-size: 15px;
   position: absolute;
-  right: 40px;
+  right: 76px;
   width: 180px;
-  color: white;
-  padding-bottom: 4px;
+  color: #F5DAAA;
+  padding-bottom: 3px;
 }
 .page-home .hero .badge:hover {
-  width: 224px;
+  width: 258px;
 }
 .page-home .hero .badge:hover h2 {
   border-left: 1px solid rgba(255, 255, 255, 0.5);
@@ -72,7 +75,7 @@ body,
   padding: 0 0 60px 0;
 }
 .page-home .hero ul li {
-  color: rgba(245, 218, 170, 0.5);
+  color: rgba(255, 255, 255, 0.4);
   text-transform: uppercase;
   list-style: none;
   padding: 0 0 10px 0;
@@ -136,8 +139,8 @@ body,
 }
 .page-home .hero p:last-of-type {
   padding: 0;
-  font-size: 21px;
-  line-height: 26px;
+  font-size: 22px;
+  line-height: 28px;
 }
 @keyframes hover-fade {
   from {
@@ -147,45 +150,56 @@ body,
     opacity: 1;
   }
 }
-.page-home .recent-banner {
-  text-align: center;
-  padding: 10px;
-  color: #2b4b55;
-  position: relative;
-  z-index: 12;
-}
 .page-home .highlight {
   padding: 80px 40px 40px;
   text-align: center;
-  background-color: rgba(77, 104, 162, 0.3);
+  background-color: white;
 }
 .page-home .highlight a {
-  color: #2b4b55;
   text-decoration: none;
-  font-size: 21px;
-  font-weight: 700;
+  font-size: 28px;
+  font-weight: 500;
 }
 .page-home .highlight a:hover {
   text-decoration: underline;
 }
 .page-home .highlight p {
-  font-size: 17px;
-  padding-bottom: 20px;
+  font-size: 22px;
+  padding-bottom: 60px;
 }
 .page-home .highlight img {
   max-width: 940px;
   width: 100%;
+  border: 1px solid rgba(171, 202, 212, 0.55);
+  -webkit-box-shadow: 0px 0px 15px 3px rgba(189, 197, 222, 0.5);
+  -moz-box-shadow: 0px 0px 15px 3px rgba(189, 197, 222, 0.5);
+  box-shadow: 0px 0px 15px 3px rgba(189, 197, 222, 0.5);
+  transition: max-width 0.5s ease;
 }
 .page-home .highlight.primary {
-  background-color: #4D68A2;
+  background-color: #362a42;
+}
+.page-home .highlight.primary a {
   color: white;
 }
-.page-home .highlight.primary a,
-.page-home .highlight.primary p {
-  color: white;
+.page-home .highlight.primary img {
+  border: none;
+  box-shadow: none;
 }
 .page-home .highlight.primary p {
   margin-bottom: 40px;
+  color: #F5DAAA;
+}
+.page-home .highlight.secondary {
+  padding-bottom: 0;
+  max-height: 640px;
+  overflow: hidden;
+}
+.page-home .highlight.secondary a {
+  color: black;
+}
+.page-home .highlight.secondary img:hover {
+  max-width: 980px;
 }
 .page-home .all-work {
   padding: 0;
@@ -198,6 +212,8 @@ body,
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -ms-box-sizing: border-box;
+  background: #362a42;
+  background: linear-gradient(124deg, #362a42 0%, #000000 100%);
 }
 @media (max-width: 480px) {
   .page-home .all-work {
@@ -210,7 +226,7 @@ body,
   }
 }
 .page-home .all-work h3 {
-  color: #2b4b55;
+  color: white;
   font-size: 21px;
   font-weight: 700;
   padding: 10px 0 0 0;
@@ -219,7 +235,7 @@ body,
   margin: 0;
   font-size: 19px;
   padding: 0 0 40px 0;
-  color: #2b4b55;
+  color: white;
 }
 .page-home .all-work p.contact-me {
   font-size: 15px;
@@ -229,7 +245,7 @@ body,
   padding-top: 40px;
 }
 .page-home .all-work p.contact-me a {
-  color: #5983cb;
+  color: white;
   text-decoration: none;
 }
 .page-home .all-work p.contact-me a:hover {
@@ -243,18 +259,46 @@ body,
   justify-content: center;
 }
 .page-home .all-work .grid .grid-item {
-  width: 300px;
-  height: 200px;
-  padding: 20px;
+  margin: 20px;
+  position: relative;
+}
+.page-home .all-work .grid .grid-item:hover .reveal {
+  opacity: 1;
+}
+.page-home .all-work .grid .grid-item .reveal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #000000;
+  background: linear-gradient(124deg, rgba(137, 14, 255, 0.8) 0%, rgba(254, 29, 202, 0.8) 100%);
+  color: white;
+  font-size: 28px;
+  width: 420px;
+  height: 280px;
+  padding: 40px;
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+  text-align: left;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+}
+.page-home .all-work .grid .grid-item .reveal small {
+  display: block;
+  font-size: 17px;
+  padding-top: 10px;
+}
+.page-home .all-work .grid .grid-item img {
+  width: 420px;
+  height: 280px;
 }
 .page-home .all-work .grid .grid-item img.border {
-  border: 1px solid rgba(171, 202, 212, 0.55);
+  border: 1px solid #1a2d33;
 }
 .top-nav {
-  background-color: #FFE53B;
-  background-image: -webkit-linear-gradient(57deg, #ffcd77 0%, #ff5447 65%);
-  background-image: -o-linear-gradient(57deg, #ffcd77 0%, #ff5447 65%);
-  background-image: linear-gradient(147deg, #ffcd77 0%, #ff5447 65%);
+  background: #e05af0;
+  background: linear-gradient(135deg, #e05af0 0%, #0f7bff 50%, #00e2ff 100%);
   padding: 20px;
   text-align: center;
   position: relative;
@@ -271,18 +315,16 @@ body,
 }
 .top-nav .back-btn a {
   position: absolute;
-  left: 40px;
+  left: 0;
   top: 26px;
   background-color: black;
   color: white;
-  border-radius: 60px;
   font-size: 13px;
   padding: 10px 24px 12px;
   text-decoration: none;
 }
 .top-nav .back-btn a:hover {
-  background-color: white;
-  color: black;
+  background-color: #282828;
 }
 @media (max-width: 480px) {
   .top-nav .back-btn a {
