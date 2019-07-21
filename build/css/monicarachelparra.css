@@ -119,9 +119,7 @@ body,
   color: white;
   font-weight: 900;
   padding: 0;
-}
-.page-home .hero ul li:last-child:hover {
-  padding: 0;
+  cursor: default;
 }
 .page-home .hero ul li:last-child span {
   display: block;
@@ -257,6 +255,7 @@ body,
   flex-direction: row;
   width: 100%;
   justify-content: center;
+  padding-bottom: 60px;
 }
 .page-home .all-work .grid .grid-item {
   margin: 20px;
