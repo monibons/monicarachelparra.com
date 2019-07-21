@@ -6,117 +6,145 @@ body,
   font-family: 'Lato', sans-serif;
   -webkit-font-smoothing: antialiased;
 }
-#particles {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 9;
+.page-home .hero {
+  padding: 80px 40px 100px 100px;
+  background: #ffca67;
+  background: linear-gradient(90deg, #ff0176 0%, #ffca67 100%);
 }
 @media (max-width: 480px) {
-  #particles {
-    height: 380px;
-    overflow: hidden;
-  }
-}
-.page-home .title-hero {
-  text-align: center;
-  padding: 80px 40px 80px 40px;
-  background: linear-gradient(45deg, #ffcd77, #ff834f, #ff5447, #ff834f, #ffcd77);
-  background-size: 300% 100%;
-  -webkit-animation: HeroGradient 20s ease infinite;
-  -moz-animation: HeroGradient 20s ease infinite;
-  animation: HeroGradient 20s ease infinite;
-}
-@media (max-width: 480px) {
-  .page-home .title-hero {
+  .page-home .hero {
     padding-top: 100px;
   }
 }
-.page-home .title-hero h2 {
-  font-size: 54px;
-  font-weight: 200;
+.page-home .hero .badge {
+  width: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: absolute;
+  right: 40px;
+  top: 40px;
+  padding: 10px 8px 10px 10px;
+  background-color: black;
+  transition: width .5s ease;
+  overflow: hidden;
+  cursor: pointer;
+}
+.page-home .hero .badge::before {
+  opacity: 0;
+  content: 'monica rachel parra';
+  transition: opacity .5s ease;
+  position: absolute;
+  right: 40px;
+  width: 180px;
   color: white;
+  padding-bottom: 4px;
+}
+.page-home .hero .badge:hover {
+  width: 224px;
+}
+.page-home .hero .badge:hover h2 {
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  padding-left: 15px;
+}
+.page-home .hero .badge:hover::before {
+  opacity: 1;
+}
+.page-home .hero h2 {
+  font-size: 30px;
+  font-weight: 900;
+  width: auto;
+  color: white;
+  letter-spacing: .06em;
   text-transform: uppercase;
+  text-align: right;
   margin: 0;
   padding: 0;
 }
 @media (max-width: 480px) {
-  .page-home .title-hero h2 {
+  .page-home .hero h2 {
     line-height: 48px;
     margin-bottom: 40px;
   }
 }
-.page-home .title-hero p {
-  font-size: 21px;
-  color: #ffcd77;
-  letter-spacing: .03em;
-  padding-top: 20px;
-}
-.page-home .title-hero p strong {
-  font-weight: 700;
-  color: white;
-}
-.page-home .title-hero p + p {
-  font-size: 15px;
+.page-home .hero ul {
+  margin: 0;
   padding: 0 0 60px 0;
 }
-.page-home .title-hero p + p strong {
-  font-weight: 400;
-}
-.page-home .title-hero .areas-of-focus {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin: 0 auto;
-  width: 80%;
-  justify-content: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
-  margin-top: 40px;
-}
-.page-home .title-hero .areas-of-focus h3 {
+.page-home .hero ul li {
+  color: rgba(245, 218, 170, 0.5);
   text-transform: uppercase;
-  padding: 40px;
-  color: white;
-  font-size: 21px;
+  list-style: none;
+  padding: 0 0 10px 0;
+  cursor: pointer;
+  transition: color .5s ease;
+  transition: padding .6s ease;
+}
+.page-home .hero ul li:hover {
+  color: #F5DAAA;
+  padding: 0 0 10px 10px;
+}
+.page-home .hero ul li:hover span {
+  display: inline-block;
+  -webkit-animation-name: hover-fade;
+  -webkit-animation-duration: 1s;
+  animation-name: hover-fade;
+  animation-duration: 1s;
+}
+.page-home .hero ul li span {
+  font-size: 15px;
+  text-transform: none;
   font-weight: 400;
-  letter-spacing: .05em;
+  color: rgba(255, 255, 255, 0.75);
+  margin-left: 2px;
+  display: none;
 }
-@media (max-width: 480px) {
-  .page-home .title-hero .areas-of-focus h3 {
-    padding: 20px 40px;
-  }
+.page-home .hero ul li:first-child {
+  font-size: 16px;
 }
-@-webkit-keyframes HeroGradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+.page-home .hero ul li:nth-child(2) {
+  font-size: 22px;
 }
-@-moz-keyframes HeroGradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+.page-home .hero ul li:nth-child(3) {
+  font-size: 26px;
 }
-@keyframes HeroGradient {
-  0% {
-    background-position: 0% 50%;
+.page-home .hero ul li:nth-child(4) {
+  font-size: 30px;
+}
+.page-home .hero ul li:last-child {
+  font-size: 42px;
+  color: white;
+  font-weight: 900;
+  padding: 0;
+}
+.page-home .hero ul li:last-child:hover {
+  padding: 0;
+}
+.page-home .hero ul li:last-child span {
+  display: block;
+  font-size: 21px;
+  animation-name: none;
+  margin: 0;
+  padding-top: 10px;
+}
+.page-home .hero p {
+  font-size: 28px;
+  font-weight: 400;
+  color: white;
+  max-width: 900px;
+  padding: 20px 0 40px 0;
+}
+.page-home .hero p:last-of-type {
+  padding: 0;
+  font-size: 21px;
+  line-height: 26px;
+}
+@keyframes hover-fade {
+  from {
+    opacity: 0;
   }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
+  to {
+    opacity: 1;
   }
 }
 .page-home .recent-banner {
@@ -129,13 +157,10 @@ body,
 .page-home .highlight {
   padding: 80px 40px 40px;
   text-align: center;
-  position: relative;
-  z-index: 11;
-  background-color: #4D68A2;
-  color: white;
+  background-color: rgba(77, 104, 162, 0.3);
 }
 .page-home .highlight a {
-  color: white;
+  color: #2b4b55;
   text-decoration: none;
   font-size: 21px;
   font-weight: 700;
@@ -152,14 +177,12 @@ body,
   width: 100%;
 }
 .page-home .highlight.primary {
-  background-color: rgba(77, 104, 162, 0.3);
-  max-height: 560px;
-  overflow-y: hidden;
-  border-bottom: 1px solid #abcad4;
+  background-color: #4D68A2;
+  color: white;
 }
 .page-home .highlight.primary a,
 .page-home .highlight.primary p {
-  color: #2b4b55;
+  color: white;
 }
 .page-home .highlight.primary p {
   margin-bottom: 40px;
@@ -258,9 +281,6 @@ body,
   text-decoration: none;
 }
 .top-nav .back-btn a:hover {
-  -webkit-transition: background-color 200ms linear;
-  -ms-transition: background-color 200ms linear;
-  transition: background-color 200ms linear;
   background-color: white;
   color: black;
 }

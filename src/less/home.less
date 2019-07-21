@@ -7,35 +7,61 @@ body,
   font-family: 'Lato', sans-serif;
   -webkit-font-smoothing: antialiased;
 }
-
-#particles {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 9;
-
-  @media (max-width: 480px) {
-    height: 380px;
-    overflow: hidden;
-  }
-}
 .page-home {
-  .title-hero {
-    text-align: center;
-    padding: 80px 40px 80px 40px;
-    background: linear-gradient(45deg, @mp-mango, @mp-peach, @mp-papaya, @mp-peach,@mp-mango);
-    background-size: 300% 100%;
-    -webkit-animation: HeroGradient 20s ease infinite;
-    -moz-animation: HeroGradient 20s ease infinite;
-    animation: HeroGradient 20s ease infinite;
+  .hero {
+    padding: 80px 40px 100px 100px;
+    background: rgb(255,202,103);
+    background: linear-gradient(90deg, rgba(255,1,118,1) 0%, rgba(255,202,103,1) 100%);
 
     @media (max-width: 480px) { padding-top: 100px;}
 
+    .badge {
+      width: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      position: absolute;
+      right: 40px;
+      top: 40px;
+      padding: 10px 8px 10px 10px;
+      background-color: black;
+      transition: width .5s ease;
+      overflow: hidden;
+      cursor: pointer;
+
+      &::before {
+        opacity: 0;
+        content: 'monica rachel parra';
+        transition: opacity .5s ease;
+        position: absolute;
+        right: 40px;
+        width: 180px;
+        color: white;
+        padding-bottom: 4px;
+      }
+
+      &:hover {
+        width: 224px;
+
+        h2 {
+          border-left: 1px solid rgba(255,255,255,.5);
+          padding-left: 15px;
+        }
+
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+
     h2 {
-      font-size: 54px;
-      font-weight: 200;
+      font-size: 30px;
+      font-weight: 900;
+      width: auto;
       color: white;
+      letter-spacing: .06em;
       text-transform: uppercase;
+      text-align: right;
       margin: 0;
       padding: 0;
       @media (max-width: 480px) {
@@ -44,77 +70,89 @@ body,
       }
 
     }
-    p {
-      font-size: 21px;
-      color: @mp-mango;
-      letter-spacing: .03em;
-      padding-top: 20px;
-      strong {
-        font-weight: 700;
-        color: white;
-      }
-      & + p {
-        font-size: 15px;
-        padding: 0 0 60px 0;
-        strong {
+    ul {
+      margin: 0;
+      padding: 0 0 60px 0;
+
+      li {
+        color: fade(#F5DAAA, 50%);
+        text-transform: uppercase;
+        list-style: none;
+        padding: 0 0 10px 0;
+        cursor: pointer;
+        transition: color .5s ease;
+        transition: padding .6s ease;
+
+        &:hover {
+          color: #F5DAAA;
+          padding: 0 0 10px 10px;
+          span {
+            display: inline-block;
+            -webkit-animation-name: hover-fade;
+            -webkit-animation-duration: 1s;
+            animation-name: hover-fade;
+            animation-duration: 1s;
+          }
+        }
+
+        span {
+          font-size: 15px;
+          text-transform: none;
           font-weight: 400;
+          color: rgba(255,255,255,.75);
+          margin-left: 2px;
+          display: none;
+
+        }
+        &:first-child {
+          font-size: 16px;
+        }
+        &:nth-child(2) {
+          font-size: 22px;
+        }
+        &:nth-child(3) {
+          font-size: 26px;
+        }
+        &:nth-child(4) {
+          font-size: 30px;
+        }
+        &:last-child {
+          font-size: 42px;
+          color: white;
+          font-weight: 900;
+          padding: 0;
+
+          &:hover {
+            padding: 0;
+          }
+
+          span {
+            display: block;
+            font-size: 21px;
+            animation-name: none;
+            margin: 0;
+            padding-top: 10px;
+          }
         }
       }
     }
-    .areas-of-focus {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      margin: 0 auto;
-      width: 80%;
-      justify-content: center;
-      border-top: 1px solid fade(white,50%);
-      margin-top: 40px;
-      h3 {
-        text-transform: uppercase;
-        padding: 40px;
-        color: white;
-        font-size: 21px;
-        font-weight: 400;
-        letter-spacing: .05em;
+    p {
+      font-size: 28px;
+      font-weight: 400;
+      color: white;
+      max-width: 900px;
+      padding: 20px 0 40px 0;
 
-        @media (max-width: 480px) { padding: 20px 40px; }
+      &:last-of-type {
+        padding: 0;
+        font-size: 21px;
+        line-height: 26px;
       }
     }
   }
-
-  @-webkit-keyframes HeroGradient {
-    0% {
-      background-position: 0% 50%
-    }
-    50% {
-      background-position: 100% 50%
-    }
-    100% {
-      background-position: 0% 50%
-    }
-  }
-  @-moz-keyframes HeroGradient {
-    0% {
-  		background-position: 0% 50%
-  	}
-  	50% {
-  		background-position: 100% 50%
-  	}
-  	100% {
-  		background-position: 0% 50%
-  	}
-  }
-  @keyframes HeroGradient {
-    0% {
-  		background-position: 0% 50%
-  	}
-  	50% {
-  		background-position: 100% 50%
-  	}
-  	100% {
-  		background-position: 0% 50%
-  	}
+  @keyframes hover-fade {
+    from { opacity: 0;}
+    to { opacity: 1;}
   }
   .recent-banner {
     text-align: center;
@@ -126,13 +164,10 @@ body,
   .highlight {
     padding: 80px 40px 40px;
     text-align: center;
-    position: relative;
-    z-index: 11;
-    background-color: #4D68A2;
-    color: white;
+    background-color: fade(#4D68A2,30%);
 
     a {
-      color: white;
+      color: darken(@text-color, 50%);
       text-decoration: none;
       font-size: 21px;
       font-weight: 700;
@@ -149,13 +184,10 @@ body,
       width: 100%;
     }
     &.primary {
-      background-color: fade(#4D68A2,30%);
-      max-height: 560px;
-      overflow-y: hidden;
-      border-bottom: 1px solid @text-color;
-
+      background-color: #4D68A2;
+      color: white;
       a, p {
-        color: darken(@text-color, 50%);
+        color: white;
       }
       p {
         margin-bottom: 40px;
