@@ -13,7 +13,7 @@ body,
 }
 @media (max-width: 500px) {
   .page-home .hero {
-    padding: 80px 4 0px 100px 40px;
+    padding: 80px 40px 100px 40px;
   }
 }
 .page-home .hero .badge {
@@ -132,7 +132,7 @@ body,
   font-size: 28px;
   font-weight: 400;
   color: white;
-  max-width: 900px;
+  max-width: 860px;
   padding: 20px 0 40px 0;
 }
 .page-home .hero p:last-of-type {
@@ -149,21 +149,32 @@ body,
   }
 }
 .page-home .highlight {
-  padding: 80px 40px 40px;
+  padding: 60px 40px 40px;
   text-align: center;
   background-color: white;
 }
+.page-home .highlight h3 {
+  text-transform: uppercase;
+  padding: 0 0 10px 0;
+  margin: 0;
+  font-size: 15px;
+  color: rgba(54, 42, 66, 0.6);
+  line-height: 52px;
+}
 .page-home .highlight a {
   text-decoration: none;
-  font-size: 28px;
-  font-weight: 500;
+  font-size: 26px;
+  font-weight: 700;
+  border-bottom: 2px dotted #00e2ff;
+  padding-bottom: 10px;
 }
 .page-home .highlight a:hover {
-  text-decoration: underline;
+  border-bottom: 2px solid #00e2ff;
 }
 .page-home .highlight p {
-  font-size: 22px;
-  padding-bottom: 60px;
+  font-size: 19px;
+  padding: 20px 0 60px 0;
+  color: #362a42;
 }
 .page-home .highlight img {
   max-width: 940px;
@@ -174,23 +185,9 @@ body,
   box-shadow: 0px 0px 15px 3px rgba(189, 197, 222, 0.5);
   transition: max-width 0.5s ease;
 }
-.page-home .highlight.primary {
-  background-color: #362a42;
-}
-.page-home .highlight.primary a {
-  color: white;
-}
-.page-home .highlight.primary img {
-  border: none;
-  box-shadow: none;
-}
-.page-home .highlight.primary p {
-  margin-bottom: 40px;
-  color: #F5DAAA;
-}
 .page-home .highlight.secondary {
   padding-bottom: 0;
-  max-height: 640px;
+  max-height: 700px;
   overflow: hidden;
 }
 .page-home .highlight.secondary a {
@@ -200,7 +197,7 @@ body,
   max-width: 980px;
 }
 .page-home .all-work {
-  padding: 0;
+  padding: 0 0 60px 0;
   text-align: center;
   margin: 0 auto;
   display: flex;
@@ -227,7 +224,7 @@ body,
   color: white;
   font-size: 21px;
   font-weight: 700;
-  padding: 10px 0 0 0;
+  padding: 40px 0 0 0;
 }
 .page-home .all-work p {
   margin: 0;
@@ -236,14 +233,13 @@ body,
   color: white;
 }
 .page-home .all-work p.contact-me {
-  font-size: 15px;
-  font-weight: 600;
-  border-bottom: 1px solid #abcad4;
+  font-size: 19px;
+  font-weight: 500;
   margin: 0 auto;
-  padding-top: 40px;
+  padding: 40px;
 }
 .page-home .all-work p.contact-me a {
-  color: white;
+  color: #00e2ff;
   text-decoration: none;
 }
 .page-home .all-work p.contact-me a:hover {
@@ -255,7 +251,6 @@ body,
   flex-direction: row;
   width: 100%;
   justify-content: center;
-  padding-bottom: 60px;
 }
 .page-home .all-work .grid .grid-item {
   margin: 20px;
@@ -318,12 +313,10 @@ body,
   top: 26px;
   background-color: black;
   color: white;
-  font-size: 13px;
+  font-size: 15px;
+  font-weight: 900;
   padding: 10px 24px 12px;
   text-decoration: none;
-}
-.top-nav .back-btn a:hover {
-  background-color: #282828;
 }
 @media (max-width: 480px) {
   .top-nav .back-btn a {

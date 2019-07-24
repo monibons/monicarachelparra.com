@@ -10,11 +10,9 @@ body,
 .page-home {
   .hero {
     padding: 80px 40px 100px 100px;
-    // background: rgb(224,90,240);
-    // background: linear-gradient(135deg, rgba(224,90,240,1) 0%, rgba(15,123,255,1) 50%, rgba(0,226,255,1) 100%);
     background: rgb(137,14,255);
   background: linear-gradient(124deg, rgba(137,14,255,1) 0%, rgba(254,29,202,1) 100%);
-    @media (max-width: 500px) {padding: 80px 4 0px 100px 40px;}
+    @media (max-width: 500px) {padding: 80px 40px 100px 40px;}
 
     .badge {
       width: 45px;
@@ -141,7 +139,7 @@ body,
       font-size: 28px;
       font-weight: 400;
       color: white;
-      max-width: 900px;
+      max-width: 860px;
       padding: 20px 0 40px 0;
 
       &:last-of-type {
@@ -156,21 +154,34 @@ body,
     to { opacity: 1;}
   }
   .highlight {
-    padding: 80px 40px 40px;
+    padding: 60px 40px 40px;
     text-align: center;
     background-color: white;
 
+    h3 {
+      text-transform: uppercase;
+      padding: 0 0 10px 0;
+      margin: 0;
+      font-size: 15px;
+      color: rgba(54,42,66,.6);
+      line-height: 52px;
+    }
+
     a {
       text-decoration: none;
-      font-size: 28px;
-      font-weight: 500;
+      font-size: 26px;
+      font-weight: 700;
+      border-bottom: 2px dotted rgba(0,226,255,1);
+      padding-bottom: 10px;
+
       &:hover {
-        text-decoration: underline;
+        border-bottom: 2px solid rgba(0,226,255,1);
       }
     }
     p {
-      font-size: 22px;
-      padding-bottom: 60px;
+      font-size: 19px;
+      padding: 20px 0 60px 0;
+      color: rgba(54,42,66,1);
     }
     img {
       max-width: 940px;
@@ -182,26 +193,10 @@ body,
       transition: max-width .5s ease;
 
     }
-    &.primary {
-      background-color: #362a42;
 
-      a {
-        color: white;
-      }
-
-      img {
-        border: none;
-        box-shadow: none;
-      }
-
-      p {
-        margin-bottom: 40px;
-        color: #F5DAAA;
-      }
-    }
     &.secondary {
       padding-bottom: 0;
-      max-height: 640px;
+      max-height: 700px;
       overflow: hidden;
       a {
         color: black;
@@ -212,7 +207,7 @@ body,
     }
   }
   .all-work {
-    padding: 0;
+    padding: 0 0 60px 0;
     text-align: center;
     margin: 0 auto;
     display: flex;
@@ -231,7 +226,7 @@ background: linear-gradient(124deg, rgba(54,42,66,1) 0%, rgba(0,0,0,1) 100%);
       color: white;
       font-size: 21px;
       font-weight: 700;
-      padding: 10px 0 0 0;
+      padding: 40px 0 0 0;
     }
     p {
       margin: 0;
@@ -240,14 +235,13 @@ background: linear-gradient(124deg, rgba(54,42,66,1) 0%, rgba(0,0,0,1) 100%);
       color: white;
     }
     p.contact-me {
-      font-size: 15px;
-      font-weight: 600;
-      border-bottom: 1px solid @text-color;
+      font-size: 19px;
+      font-weight: 500;
       margin: 0 auto;
-      padding-top: 40px;
+      padding: 40px;
 
       a {
-        color: white;
+        color: rgba(0,226,255,1);
         text-decoration: none;
 
         &:hover {
@@ -261,7 +255,6 @@ background: linear-gradient(124deg, rgba(54,42,66,1) 0%, rgba(0,0,0,1) 100%);
       flex-direction: row;
       width: 100%;
       justify-content: center;
-      padding-bottom: 60px;
 
       .grid-item {
         margin: 20px;
