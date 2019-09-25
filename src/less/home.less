@@ -153,6 +153,92 @@ body,
     from { opacity: 0;}
     to { opacity: 1;}
   }
+  .about-me {
+    background: #281e31;
+    // background: linear-gradient(124deg,  0%, rgba(0,0,0,1) rgba(54,42,66,1) 100%);
+    padding: 60px 100px;
+
+    @media (max-width: 1200px) {
+      padding: 40px;
+    }
+
+    h4 {
+      color: white;
+      font-size: 16px;
+      font-weight: 400;
+      letter-spacing: .05em;
+    }
+
+    .little-tidbits {
+      display: flex;
+      @media (max-width: 1200px) {
+        flex-wrap: wrap;
+      }
+
+      .tidbit {
+        margin-right: 40px;
+        cursor: default;
+
+        &:hover {
+          p {
+            color: fade(white,65%);
+            transition: color 1s ease;
+            transition: border-color 1s ease;
+            border-color: #F5DAAA;
+          }
+        }
+
+        .logo {
+          height: 70px;
+          display: flex;
+          align-items: center;
+
+          img {
+            max-width: 150px;
+          }
+        }
+
+        &:nth-of-type(2) {
+          img {
+            max-width: 90px;
+          }
+        }
+        &:nth-of-type(4) {
+          img {
+            max-width: 130px;
+          }
+        }
+        &:last-of-type {
+          margin-right: 0;
+          img {
+            max-width: 50px;
+          }
+        }
+
+        p {
+          color: fade(white,50);
+          font-size: 14px;
+          line-height: 21px;
+          height: 80px;
+          border-bottom: 1px solid fade(white,25%);
+          padding-bottom: 30px;
+
+          @media (max-width: 1200px) {
+            height: auto;
+            border: none;
+            padding-bottom: 0;
+          }
+
+          strong {
+            color: fade(white,75%);
+          }
+        }
+      }
+    }
+
+
+  }
+
   .highlight {
     padding: 60px 40px 40px;
     text-align: center;
