@@ -373,6 +373,7 @@ body,
 .portfolio-detail .wrapper {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 .portfolio-detail .wrapper img.two-col {
   width: 40%;
