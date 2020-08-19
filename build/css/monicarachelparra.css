@@ -187,19 +187,22 @@ body,
   align-items: center;
 }
 .page-home .about-me .little-tidbits .tidbit .logo img {
-  max-width: 150px;
+  max-width: 50px;
 }
 .page-home .about-me .little-tidbits .tidbit:nth-of-type(2) img {
-  max-width: 90px;
+  max-width: 150px;
+}
+.page-home .about-me .little-tidbits .tidbit:nth-of-type(3) img {
+  max-width: 150px;
 }
 .page-home .about-me .little-tidbits .tidbit:nth-of-type(4) img {
-  max-width: 130px;
+  max-width: 90px;
 }
 .page-home .about-me .little-tidbits .tidbit:last-of-type {
   margin-right: 0;
 }
 .page-home .about-me .little-tidbits .tidbit:last-of-type img {
-  max-width: 50px;
+  max-width: 130px;
 }
 .page-home .about-me .little-tidbits .tidbit p {
   color: rgba(255, 255, 255, 0.5);
