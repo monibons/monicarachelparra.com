@@ -444,6 +444,11 @@ body,
   margin-bottom: 40px;
   padding-top: 20px;
 }
+.portfolio-detail .no-wrap {
+  max-width: 1600px;
+  text-align: center;
+  margin: 0 auto;
+}
 .portfolio-detail .wrapper {
   display: flex;
   justify-content: center;
