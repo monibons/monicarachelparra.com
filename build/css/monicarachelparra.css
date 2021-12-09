@@ -405,14 +405,14 @@ body,
 }
 .portfolio-detail h2 {
   color: #2b4b55;
-  font-size: 21px;
+  font-size: 1.5rem;
   font-weight: 700;
 }
 .portfolio-detail p {
-  color: #2b4b55;
-  font-size: 17px;
+  color: #3d6876;
+  font-size: 1.25rem;
   padding: 20px 0 20px;
-  line-height: 25px;
+  line-height: 27px;
 }
 .portfolio-detail p:first-of-type {
   padding-top: 40px;
@@ -439,7 +439,7 @@ body,
   color: #3d6876;
 }
 .portfolio-detail img {
-  max-width: 940px;
+  max-width: 1200px;
   width: 100%;
   margin-bottom: 40px;
   padding-top: 20px;
