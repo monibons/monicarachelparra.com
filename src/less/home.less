@@ -144,8 +144,8 @@ body,
 
       &:last-of-type {
         padding: 0;
-        font-size: 22px;
-        line-height: 28px;
+        font-size: 27px;
+        line-height: 31px;
       }
     }
   }
@@ -154,12 +154,37 @@ body,
     to { opacity: 1;}
   }
   .about-me {
-    background: #281e31;
-    // background: linear-gradient(124deg,  0%, rgba(0,0,0,1) rgba(54,42,66,1) 100%);
+    background: black;
     padding: 60px 100px;
 
+    &.footer {
+      border-top: 1px solid fade(white, 20%);
+    }
+    p {
+      font-size: 21px;
+      color: fade(white,65%);
+      line-height: 29px;
+      max-width: 1200px;
+    }
+    ul li {
+      color: white;
+      padding: 8px 0;
+    }
     @media (max-width: 1200px) {
       padding: 40px;
+    }
+
+    p.contact-me {
+      font-size: 17px;
+      margin-top: 40px;
+      a {
+        color: rgba(254,29,202,1);
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
 
     h4 {
@@ -249,52 +274,12 @@ body,
     text-align: center;
     background-color: white;
 
-    h3 {
-      text-transform: uppercase;
-      padding: 0 0 10px 0;
-      margin: 0;
-      font-size: 15px;
-      color: rgba(54,42,66,.6);
-      line-height: 52px;
-    }
-
-    a {
-      text-decoration: none;
-      font-size: 26px;
-      font-weight: 700;
-      border-bottom: 2px dotted rgba(0,226,255,1);
-      padding-bottom: 10px;
-
-      &:hover {
-        border-bottom: 2px solid rgba(0,226,255,1);
-      }
-    }
     p {
       font-size: 19px;
       padding: 20px 0 60px 0;
       color: rgba(54,42,66,1);
-    }
-    img {
-      max-width: 940px;
-      width: 100%;
-      border: 1px solid fade(@text-color,55%);
-      -webkit-box-shadow: 0px 0px 15px 3px rgba(189,197,222,0.5);
-      -moz-box-shadow: 0px 0px 15px 3px rgba(189,197,222,0.5);
-      box-shadow: 0px 0px 15px 3px rgba(189,197,222,0.5);
-      transition: max-width .5s ease;
-
-    }
-
-    &.secondary {
-      padding-bottom: 0;
-      max-height: 700px;
-      overflow: hidden;
-      a {
-        color: black;
-      }
-      img:hover {
-        max-width: 980px;
-      }
+      max-width: 800px;
+      margin: 0 auto;
     }
   }
   .all-work {
@@ -324,21 +309,6 @@ background: linear-gradient(124deg, rgba(54,42,66,1) 0%, rgba(0,0,0,1) 100%);
       font-size: 19px;
       padding: 0 0 40px 0;
       color: white;
-    }
-    p.contact-me {
-      font-size: 19px;
-      font-weight: 500;
-      margin: 0 auto;
-      padding: 40px;
-
-      a {
-        color: rgba(0,226,255,1);
-        text-decoration: none;
-
-        &:hover {
-          text-decoration: underline;
-        }
-      }
     }
     .grid {
       display: flex;

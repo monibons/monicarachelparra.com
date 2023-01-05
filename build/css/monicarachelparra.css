@@ -137,8 +137,8 @@ body,
 }
 .page-home .hero p:last-of-type {
   padding: 0;
-  font-size: 22px;
-  line-height: 28px;
+  font-size: 27px;
+  line-height: 31px;
 }
 @keyframes hover-fade {
   from {
@@ -149,13 +149,37 @@ body,
   }
 }
 .page-home .about-me {
-  background: #281e31;
+  background: black;
   padding: 60px 100px;
+}
+.page-home .about-me.footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+.page-home .about-me p {
+  font-size: 21px;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 29px;
+  max-width: 1200px;
+}
+.page-home .about-me ul li {
+  color: white;
+  padding: 8px 0;
 }
 @media (max-width: 1200px) {
   .page-home .about-me {
     padding: 40px;
   }
+}
+.page-home .about-me p.contact-me {
+  font-size: 17px;
+  margin-top: 40px;
+}
+.page-home .about-me p.contact-me a {
+  color: #fe1dca;
+  text-decoration: none;
+}
+.page-home .about-me p.contact-me a:hover {
+  text-decoration: underline;
 }
 .page-home .about-me h4 {
   color: white;
@@ -227,48 +251,12 @@ body,
   text-align: center;
   background-color: white;
 }
-.page-home .highlight h3 {
-  text-transform: uppercase;
-  padding: 0 0 10px 0;
-  margin: 0;
-  font-size: 15px;
-  color: rgba(54, 42, 66, 0.6);
-  line-height: 52px;
-}
-.page-home .highlight a {
-  text-decoration: none;
-  font-size: 26px;
-  font-weight: 700;
-  border-bottom: 2px dotted #00e2ff;
-  padding-bottom: 10px;
-}
-.page-home .highlight a:hover {
-  border-bottom: 2px solid #00e2ff;
-}
 .page-home .highlight p {
   font-size: 19px;
   padding: 20px 0 60px 0;
   color: #362a42;
-}
-.page-home .highlight img {
-  max-width: 940px;
-  width: 100%;
-  border: 1px solid rgba(171, 202, 212, 0.55);
-  -webkit-box-shadow: 0px 0px 15px 3px rgba(189, 197, 222, 0.5);
-  -moz-box-shadow: 0px 0px 15px 3px rgba(189, 197, 222, 0.5);
-  box-shadow: 0px 0px 15px 3px rgba(189, 197, 222, 0.5);
-  transition: max-width 0.5s ease;
-}
-.page-home .highlight.secondary {
-  padding-bottom: 0;
-  max-height: 700px;
-  overflow: hidden;
-}
-.page-home .highlight.secondary a {
-  color: black;
-}
-.page-home .highlight.secondary img:hover {
-  max-width: 980px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 .page-home .all-work {
   padding: 0 0 60px 0;
@@ -305,19 +293,6 @@ body,
   font-size: 19px;
   padding: 0 0 40px 0;
   color: white;
-}
-.page-home .all-work p.contact-me {
-  font-size: 19px;
-  font-weight: 500;
-  margin: 0 auto;
-  padding: 40px;
-}
-.page-home .all-work p.contact-me a {
-  color: #00e2ff;
-  text-decoration: none;
-}
-.page-home .all-work p.contact-me a:hover {
-  text-decoration: underline;
 }
 .page-home .all-work .grid {
   display: flex;
