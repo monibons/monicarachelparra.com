@@ -56,6 +56,17 @@ body,
       }
     }
 
+    section {
+      display: flex;
+      padding: 40px 0 0 0;
+    }
+
+    img {
+      max-height: 480px;
+      margin: 0 80px 0 0;
+      border: 20px solid white;
+    }
+
     h2 {
       font-size: 30px;
       font-weight: 900;
@@ -72,29 +83,32 @@ body,
       }
 
     }
+    h4 {
+      font-size: 19px;
+      margin-bottom: 24px;
+      color: white;
+      font-weight: 600;
+    }
     ul {
       margin: 0;
-      padding: 0 0 60px 0;
+      padding: 0 0 40px 0;
 
       li {
-        color: fade(white, 40%);
-        text-transform: uppercase;
+        color: white;
+        border-bottom: 3px solid fade(black, 10%);
+        border-radius: 2px;
+        font-size: 24px;
+        font-weight: 600;
         list-style: none;
-        padding: 0 0 10px 0;
+        padding: 12px 12px 14px 0;
         cursor: pointer;
         transition: color .5s ease;
         transition: padding .6s ease;
 
         &:hover {
           color: #F5DAAA;
-          padding: 0 0 10px 10px;
-          span {
-            display: inline-block;
-            -webkit-animation-name: hover-fade;
-            -webkit-animation-duration: 1s;
-            animation-name: hover-fade;
-            animation-duration: 1s;
-          }
+          padding: 12px 12px 14px 16px;
+          background: fade(black, 8%);
         }
 
         span {
@@ -103,49 +117,46 @@ body,
           font-weight: 400;
           color: rgba(255,255,255,.75);
           margin-left: 2px;
-          display: none;
+        }
 
-        }
-        &:first-child {
-          font-size: 16px;
-        }
         &:nth-child(2) {
           font-size: 22px;
         }
         &:nth-child(3) {
-          font-size: 26px;
+          font-size: 20px;
         }
         &:nth-child(4) {
-          font-size: 30px;
+          font-size: 18px;
         }
-        &:last-child {
-          font-size: 42px;
-          color: white;
-          font-weight: 900;
-          padding: 0;
-          cursor: default;
-
-          span {
-            display: block;
-            font-size: 21px;
-            animation-name: none;
-            margin: 0;
-            padding-top: 10px;
-          }
+        &:nth-child(5) {
+          font-size: 16px;
+        }
+        &:nth-child(6) {
+          font-size: 14px;
         }
       }
     }
     p {
-      font-size: 28px;
+      font-size: 24px;
       font-weight: 400;
       color: white;
-      max-width: 860px;
-      padding: 20px 0 40px 0;
+      max-width: 900px;
 
-      &:last-of-type {
-        padding: 0;
-        font-size: 27px;
-        line-height: 31px;
+      &.text-overlay {
+        padding: 0 30px;
+        font-size: 32px;
+        line-height: 40px;
+        font-weight: 300;
+        color: white;
+        margin-bottom: 60px;
+        span {
+          font-weight: 800;
+        }
+
+        a {
+          color: white;
+          text-decoration: none;
+        }
       }
     }
   }
@@ -156,6 +167,19 @@ body,
   .about-me {
     background: black;
     padding: 60px 100px;
+
+    section {
+      display: flex;
+    }
+
+    h3 {
+      color: white;
+      font-size: 30px;
+      font-weight: 300;
+      text-align: left;
+      max-width: 50%;
+      margin-right: 80px;
+    }
 
     &.footer {
       border-top: 1px solid fade(white, 20%);
