@@ -1,93 +1,67 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
 body,
 .site-body {
-  margin: 0;
-  padding: 0;
+  color: white;
   font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  margin: 0 auto;
+  padding: 0;
   -webkit-font-smoothing: antialiased;
 }
+.page-home section {
+  display: inline-flex;
+  justify-content: center;
+  padding: 80px 40px;
+}
+.page-home p {
+  font-size: 24px;
+  font-weight: 400;
+}
+.page-home ul,
+.page-home li {
+  margin: 0;
+  padding: 0;
+}
 .page-home .hero {
-  padding: 80px 40px 100px 100px;
   background: #890eff;
   background: linear-gradient(124deg, #890eff 0%, #fe1dca 100%);
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
 }
 @media (max-width: 500px) {
   .page-home .hero {
     padding: 80px 40px 100px 40px;
   }
 }
-.page-home .hero .badge {
-  width: 45px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  position: fixed;
-  right: 0;
-  top: 40px;
-  padding: 10px 8px 10px 10px;
-  background-color: black;
-  transition: width .5s ease;
-  overflow: hidden;
-  z-index: 10;
-  cursor: pointer;
+.page-home .hero h1 {
+  font-size: 28px;
+  font-weight: 400;
+  padding-bottom: 40px;
 }
-.page-home .hero .badge::before {
-  opacity: 0;
-  content: 'monica rachel parra';
-  transition: opacity .5s ease;
-  text-transform: uppercase;
-  font-size: 15px;
-  position: absolute;
-  right: 76px;
-  width: 180px;
-  color: rgba(255, 255, 255, 0.75);
-  padding-bottom: 3px;
+.page-home .hero h2 {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 40px;
+  margin-bottom: 60px;
+  max-width: 900px;
+  padding: 0;
 }
-.page-home .hero .badge:hover {
-  width: 258px;
+.page-home .hero h2 span {
+  font-weight: 800;
 }
-.page-home .hero .badge:hover h2 {
-  border-left: 1px solid rgba(255, 255, 255, 0.5);
-  padding-left: 15px;
-}
-.page-home .hero .badge:hover::before {
-  opacity: 1;
-}
-.page-home .hero section {
-  display: flex;
-  padding: 40px 0 0 0;
+.page-home .hero .hero-text {
+  padding-top: 120px;
 }
 .page-home .hero img {
   max-height: 480px;
   margin: 0 80px 0 0;
   border: 20px solid white;
 }
-.page-home .hero h2 {
-  font-size: 30px;
-  font-weight: 900;
-  width: auto;
-  color: white;
-  letter-spacing: .06em;
-  text-transform: uppercase;
-  text-align: right;
-  margin: 0;
-  padding: 0;
-}
-@media (max-width: 480px) {
-  .page-home .hero h2 {
-    line-height: 48px;
-    margin-bottom: 40px;
-  }
-}
-.page-home .hero h4 {
-  font-size: 19px;
-  margin-bottom: 24px;
-  color: white;
-  font-weight: 600;
-}
 .page-home .hero ul {
-  margin: 0;
   padding: 0 0 40px 0;
+  width: auto;
 }
 .page-home .hero ul li {
   color: white;
@@ -108,7 +82,6 @@ body,
 }
 .page-home .hero ul li span {
   font-size: 15px;
-  text-transform: none;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.75);
   margin-left: 2px;
@@ -128,27 +101,6 @@ body,
 .page-home .hero ul li:nth-child(6) {
   font-size: 14px;
 }
-.page-home .hero p {
-  font-size: 24px;
-  font-weight: 400;
-  color: white;
-  max-width: 900px;
-}
-.page-home .hero p.text-overlay {
-  padding: 0 30px;
-  font-size: 32px;
-  line-height: 40px;
-  font-weight: 300;
-  color: white;
-  margin-bottom: 60px;
-}
-.page-home .hero p.text-overlay span {
-  font-weight: 800;
-}
-.page-home .hero p.text-overlay a {
-  color: white;
-  text-decoration: none;
-}
 @keyframes hover-fade {
   from {
     opacity: 0;
@@ -157,129 +109,48 @@ body,
     opacity: 1;
   }
 }
-.page-home .about-me {
+.page-home .about {
   background: black;
-  padding: 60px 100px;
-}
-.page-home .about-me section {
   display: flex;
+  flex-direction: column;
+  padding: 80px;
 }
-.page-home .about-me h3 {
-  color: white;
-  font-size: 30px;
+.page-home .about section {
+  padding: 40px 0 0 0;
+}
+.page-home .about p {
+  color: rgba(255, 255, 255, 0.75);
   font-weight: 300;
-  text-align: left;
-  max-width: 50%;
-  margin-right: 80px;
+  line-height: 36px;
+  width: auto;
+  margin: 0 auto;
 }
-.page-home .about-me.footer {
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
+.page-home .about-text {
+  padding-right: 40px;
 }
-.page-home .about-me p {
-  font-size: 21px;
-  color: rgba(255, 255, 255, 0.65);
-  line-height: 29px;
-  max-width: 1200px;
+.page-home .about-text ul {
+  padding: 20px 80px;
 }
-.page-home .about-me ul li {
-  color: white;
+.page-home .about-text ul li {
+  font-size: 18px;
   padding: 8px 0;
 }
+.page-home .about .logo-group {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 400px;
+}
+.page-home .about .logo-group img {
+  width: 80px;
+  padding: 20px;
+}
 @media (max-width: 1200px) {
-  .page-home .about-me {
+  .page-home .about {
     padding: 40px;
   }
 }
-.page-home .about-me p.contact-me {
-  font-size: 17px;
-  margin-top: 40px;
-}
-.page-home .about-me p.contact-me a {
-  color: #fe1dca;
-  text-decoration: none;
-}
-.page-home .about-me p.contact-me a:hover {
-  text-decoration: underline;
-}
-.page-home .about-me h4 {
-  color: white;
-  font-size: 16px;
-  font-weight: 400;
-  letter-spacing: .05em;
-}
-.page-home .about-me .little-tidbits {
-  display: flex;
-}
-@media (max-width: 1200px) {
-  .page-home .about-me .little-tidbits {
-    flex-wrap: wrap;
-  }
-}
-.page-home .about-me .little-tidbits .tidbit {
-  margin-right: 40px;
-  cursor: default;
-}
-.page-home .about-me .little-tidbits .tidbit:hover p {
-  color: rgba(255, 255, 255, 0.65);
-  transition: color 1s ease;
-  transition: border-color 1s ease;
-  border-color: #F5DAAA;
-}
-.page-home .about-me .little-tidbits .tidbit .logo {
-  height: 70px;
-  display: flex;
-  align-items: center;
-}
-.page-home .about-me .little-tidbits .tidbit .logo img {
-  max-width: 50px;
-}
-.page-home .about-me .little-tidbits .tidbit:nth-of-type(2) img {
-  max-width: 150px;
-}
-.page-home .about-me .little-tidbits .tidbit:nth-of-type(3) img {
-  max-width: 150px;
-}
-.page-home .about-me .little-tidbits .tidbit:nth-of-type(4) img {
-  max-width: 90px;
-}
-.page-home .about-me .little-tidbits .tidbit:last-of-type {
-  margin-right: 0;
-}
-.page-home .about-me .little-tidbits .tidbit:last-of-type img {
-  max-width: 130px;
-}
-.page-home .about-me .little-tidbits .tidbit p {
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 17px;
-  line-height: 25px;
-  height: 80px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-  padding-bottom: 30px;
-}
-@media (max-width: 1200px) {
-  .page-home .about-me .little-tidbits .tidbit p {
-    height: auto;
-    border: none;
-    padding-bottom: 0;
-  }
-}
-.page-home .about-me .little-tidbits .tidbit p strong {
-  color: rgba(255, 255, 255, 0.75);
-}
-.page-home .highlight {
-  padding: 60px 40px 40px;
-  text-align: center;
-  background-color: white;
-}
-.page-home .highlight p {
-  font-size: 19px;
-  padding: 20px 0 60px 0;
-  color: #362a42;
-  max-width: 800px;
-  margin: 0 auto;
-}
 .page-home .all-work {
-  padding: 0 0 60px 0;
+  padding: 80px;
   text-align: center;
   margin: 0 auto;
   display: flex;
@@ -312,7 +183,6 @@ body,
   margin: 0;
   font-size: 19px;
   padding: 0 0 40px 0;
-  color: white;
 }
 .page-home .all-work .grid {
   display: flex;
@@ -359,13 +229,85 @@ body,
 .page-home .all-work .grid .grid-item img.border {
   border: 1px solid #1a2d33;
 }
+.page-home .more-about {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  padding: 80px;
+}
+.page-home .more-about p {
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 300;
+  line-height: 36px;
+  width: auto;
+  margin: 0 auto;
+}
+.page-home .more-about .little-tidbits {
+  display: flex;
+  background-color: black;
+  padding: 40px;
+}
+@media (max-width: 1200px) {
+  .page-home .more-about .little-tidbits {
+    flex-wrap: wrap;
+  }
+}
+.page-home .more-about .little-tidbits .tidbit {
+  margin-right: 40px;
+  cursor: default;
+}
+.page-home .more-about .little-tidbits .tidbit:hover p {
+  color: rgba(255, 255, 255, 0.65);
+  transition: color 1s ease;
+  transition: border-color 1s ease;
+  border-color: #F5DAAA;
+}
+.page-home .more-about .little-tidbits .tidbit .logo {
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+.page-home .more-about .little-tidbits .tidbit .logo img {
+  max-width: 50px;
+}
+.page-home .more-about .little-tidbits .tidbit:nth-of-type(2) img {
+  max-width: 150px;
+}
+.page-home .more-about .little-tidbits .tidbit:nth-of-type(3) img {
+  max-width: 150px;
+}
+.page-home .more-about .little-tidbits .tidbit:nth-of-type(4) img {
+  max-width: 90px;
+}
+.page-home .more-about .little-tidbits .tidbit:last-of-type {
+  margin-right: 0;
+}
+.page-home .more-about .little-tidbits .tidbit:last-of-type img {
+  max-width: 130px;
+}
+.page-home .more-about .little-tidbits .tidbit p {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 25px;
+  height: 80px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  padding-bottom: 30px;
+}
+@media (max-width: 1200px) {
+  .page-home .more-about .little-tidbits .tidbit p {
+    height: auto;
+    border: none;
+    padding-bottom: 0;
+  }
+}
+.page-home .more-about .little-tidbits .tidbit p strong {
+  color: rgba(255, 255, 255, 0.75);
+}
 .top-nav {
-  background: #e05af0;
-  background: linear-gradient(135deg, #e05af0 0%, #0f7bff 50%, #00e2ff 100%);
+  background: black;
   padding: 20px;
   text-align: center;
-  position: relative;
-  z-index: 15;
 }
 .top-nav p {
   color: white;
@@ -380,8 +322,8 @@ body,
   position: absolute;
   left: 0;
   top: 26px;
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
   font-size: 15px;
   font-weight: 900;
   padding: 10px 24px 12px;
@@ -393,68 +335,72 @@ body,
     left: 20px;
   }
 }
-.portfolio-detail {
-  padding: 80px 40px;
+.portfolio {
+  padding: 0 0 80px 0;
   text-align: center;
   background-color: rgba(77, 104, 162, 0.12);
 }
-.portfolio-detail h2 {
+.portfolio-header {
+  background-color: white;
+  padding: 60px 0 40px 0;
+  margin-bottom: 40px;
+}
+.portfolio-header h2 {
   color: #2b4b55;
   font-size: 1.5rem;
   font-weight: 700;
+  padding: 0;
+  margin: 0;
 }
-.portfolio-detail p {
+.portfolio p {
   color: #3d6876;
-  font-size: 1.25rem;
+  font-size: 17px;
   padding: 20px 0 20px;
   line-height: 27px;
 }
-.portfolio-detail p:first-of-type {
-  padding-top: 40px;
-}
-.portfolio-detail a {
+.portfolio a {
   position: relative;
   display: block;
   text-decoration: none;
   color: #0653F4;
   padding-bottom: 30px;
 }
-.portfolio-detail a:hover {
+.portfolio a:hover {
   text-decoration: underline;
 }
-.portfolio-detail h2,
-.portfolio-detail p {
+.portfolio h2,
+.portfolio p {
   max-width: 800px;
   margin: 0 auto;
 }
-.portfolio-detail h3 {
+.portfolio h3 {
   font-weight: 400;
   font-size: 17px;
   padding-bottom: 20px;
   color: #3d6876;
 }
-.portfolio-detail img {
+.portfolio img {
   max-width: 1200px;
   width: 100%;
   margin-bottom: 40px;
   padding-top: 20px;
 }
-.portfolio-detail .no-wrap {
+.portfolio .no-wrap {
   max-width: 1600px;
   text-align: center;
   margin: 0 auto;
 }
-.portfolio-detail .wrapper {
+.portfolio .wrapper {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
-.portfolio-detail .wrapper img.two-col {
+.portfolio .wrapper img.two-col {
   width: 40%;
   height: 40%;
   padding: 20px;
 }
-.portfolio-detail #player {
+.portfolio #player {
   max-width: 960px;
   width: 100%;
   margin: 0 auto;

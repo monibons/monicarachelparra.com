@@ -1,12 +1,9 @@
 @import 'variables';
 
 .top-nav {
-  background: rgb(224,90,240);
-  background: linear-gradient(135deg, rgba(224,90,240,1) 0%, rgba(15,123,255,1) 50%, rgba(0,226,255,1) 100%);
+  background: black;
   padding: 20px;
   text-align: center;
-  position: relative;
-  z-index: 15;
   p {
     color: white;
     text-transform: uppercase;
@@ -20,8 +17,8 @@
     position: absolute;
     left: 0;
     top: 26px;
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     font-size: 15px;
     font-weight: 900;
     padding: 10px 24px 12px;
@@ -32,25 +29,31 @@
     }
   }
 }
-.portfolio-detail {
-  padding: 80px 40px;
+.portfolio {
+  padding: 0 0 80px 0;
   text-align: center;
   background-color: fade(#4D68A2,12%);
-  h2 {
-    color: darken(@text-color, 50%);
-    font-size: 1.5rem;
-    font-weight: 700;
-  }
-  p {
-    color: darken(@text-color, 40%);
-    font-size: 1.25rem;
-    padding: 20px 0 20px;
-    line-height: 27px;
 
-    &:first-of-type {
-      padding-top: 40px;
+  &-header {
+    background-color: white;
+    padding: 60px 0 40px 0;
+    margin-bottom: 40px;
+    h2 {
+      color: darken(@text-color, 50%);
+      font-size: 1.5rem;
+      font-weight: 700;
+      padding: 0;
+      margin: 0;
     }
   }
+
+  p {
+    color: darken(@text-color, 40%);
+    font-size: 17px;
+    padding: 20px 0 20px;
+    line-height: 27px;
+  }
+
   a {
     position: relative;
     display: block;
