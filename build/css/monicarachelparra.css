@@ -11,6 +11,7 @@ body,
 .page-home section {
   display: inline-flex;
   justify-content: center;
+  flex-wrap: wrap;
   padding: 80px 40px;
 }
 .page-home p {
@@ -255,6 +256,7 @@ body,
 .page-home .more-about .little-tidbits .tidbit {
   margin-right: 40px;
   cursor: default;
+  max-width: 300px;
 }
 .page-home .more-about .little-tidbits .tidbit:hover p {
   color: rgba(255, 255, 255, 0.65);
