@@ -16,6 +16,8 @@ body,
     justify-content: center;
     flex-wrap: wrap;
     padding: 80px 40px;
+
+    @media (max-width: 500px) { padding: 40px;}
   }
 
   p {
@@ -36,8 +38,6 @@ body,
     margin: 0 auto;
     width: 100%;
 
-    @media (max-width: 500px) {padding: 80px 40px 100px 40px;}
-
     h1 {
       font-size: 28px;
       font-weight: 400;
@@ -48,27 +48,34 @@ body,
       font-weight: 400;
       font-size: 32px;
       line-height: 40px;
+      max-width: 820px;
       margin-bottom: 60px;
-      max-width: 900px;
       padding: 0;
+
+      @media (max-width: 500px) {
+        font-size: 24px;
+      }
 
       span {
         font-weight: 800;
-      }
-
-      @media (max-width: 480px) {
-
       }
     }
 
     .hero-text {
       padding-top: 120px;
+      @media (max-width: 500px) {
+        padding-top: 40px;
+      }
     }
 
     img {
       max-height: 480px;
       margin: 0 80px 0 0;
       border: 20px solid white;
+
+      @media (max-width: 500px) {
+        max-height: 300px;
+      }
     }
 
     ul {
@@ -135,6 +142,10 @@ body,
 
         ul {
           padding: 20px 80px;
+
+          @media (max-width: 500px) {
+            padding: 20px 40px;
+          }
           li {
             font-size: 18px;
             padding: 8px 0;
@@ -242,6 +253,10 @@ body,
     background-color: black;
     padding: 80px;
 
+    @media (max-width: 500px) {
+      padding: 0;
+    }
+
     p {
       color: fade(white, 75%);
       font-weight: 300;
@@ -254,14 +269,18 @@ body,
       display: flex;
       background-color: black;
       padding: 40px;
-      @media (max-width: 1200px) {
-        flex-wrap: wrap;
-      }
+
 
       .tidbit {
         margin-right: 40px;
         cursor: default;
         max-width: 300px;
+
+        @media (max-width: 500px) {
+          padding: 0 0 40px 0;
+          margin: 0;
+          max-width: 100%;
+        }
 
         &:hover {
           p {
