@@ -184,9 +184,10 @@ body,
   -ms-box-sizing: border-box;
 }
 .page-home .all-work .project {
-  padding: 80px 20px;
-  margin: 0;
-  border-bottom: 1px solid #444;
+  max-width: 1200px;
+  padding: 80px 20px 40px 20px;
+  margin: 0 auto;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 .page-home .all-work .project:last-of-type {
   border: none;
@@ -215,10 +216,13 @@ body,
   opacity: .5;
 }
 .page-home .all-work .project img {
-  max-width: 1200px;
   margin: 0 auto;
   padding: 0 0 0 0;
   width: 100%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
 }
 .page-home .more-about {
   display: flex;
