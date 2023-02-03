@@ -171,11 +171,10 @@ body,
   }
 }
 .page-home .all-work {
-  background: #362a42;
-  background: linear-gradient(124deg, #362a42 0%, #000000 100%);
+  background: #180E2E;
   display: flex;
   flex-direction: column;
-  padding: 40px;
+  padding: 0;
   margin: 0;
   text-align: center;
   width: 100%;
@@ -185,7 +184,7 @@ body,
   -ms-box-sizing: border-box;
 }
 .page-home .all-work .project {
-  padding: 80px 0;
+  padding: 80px 20px;
   margin: 0;
   border-bottom: 1px solid #444;
 }
@@ -242,12 +241,12 @@ body,
 .page-home .more-about .little-tidbits {
   display: flex;
   background-color: black;
-  padding: 40px;
+  padding: 20px;
 }
 .page-home .more-about .little-tidbits .tidbit {
-  margin-right: 40px;
+  margin-right: 20px;
   cursor: default;
-  max-width: 300px;
+  max-width: 280px;
 }
 @media (max-width: 500px) {
   .page-home .more-about .little-tidbits .tidbit {
@@ -305,7 +304,8 @@ body,
   color: rgba(255, 255, 255, 0.75);
 }
 .top-nav {
-  background: black;
+  background: #890eff;
+  background: linear-gradient(124deg, #890eff 0%, #fe1dca 100%);
   padding: 20px;
   text-align: center;
 }
@@ -336,24 +336,23 @@ body,
   }
 }
 .portfolio {
-  padding: 0 0 80px 0;
+  padding: 0 20px 80px 20px;
   text-align: center;
-  background-color: rgba(77, 104, 162, 0.12);
+  background: #180E2E;
 }
 .portfolio-header {
-  background-color: white;
   padding: 60px 0 40px 0;
   margin-bottom: 40px;
 }
 .portfolio-header h2 {
-  color: #2b4b55;
+  color: white;
   font-size: 1.5rem;
   font-weight: 700;
   padding: 0;
   margin: 0;
 }
 .portfolio p {
-  color: #3d6876;
+  color: rgba(255, 255, 255, 0.5);
   font-size: 17px;
   padding: 20px 0 20px;
   line-height: 27px;
@@ -389,6 +388,12 @@ body,
   max-width: 1600px;
   text-align: center;
   margin: 0 auto;
+}
+.portfolio .video-player {
+  max-width: 958px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 .portfolio .wrapper {
   display: flex;
