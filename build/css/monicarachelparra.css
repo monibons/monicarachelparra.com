@@ -364,6 +364,15 @@ body,
   padding: 20px 0 20px;
   line-height: 27px;
 }
+.portfolio p.size-l {
+  font-size: 25px;
+  line-height: 34px;
+  color: white;
+  font-weight: 300;
+}
+.portfolio p.highlight {
+  color: white;
+}
 .portfolio a {
   position: relative;
   display: block;
