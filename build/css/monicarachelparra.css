@@ -232,6 +232,12 @@ body,
   margin: 0 auto;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
+.page-home .all-work .project.branding {
+  max-width: 800px;
+}
+.page-home .all-work .project.branding img {
+  margin: 20px 0;
+}
 .page-home .all-work .project h3 {
   font-size: 24px;
   margin: 0;
