@@ -1,0 +1,29 @@
+.footer {
+  display: flex;  
+  text-align: center;
+  justify-content: center;
+  padding: 40px;
+  background-color: black;
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+  }
+
+  a {
+    margin: 0 20px;
+    color: white;
+
+    @media (max-width: 500px) {
+      margin: 10px;
+    }
+  
+
+    &:hover {
+      color: pink;
+    }
+
+    &.no-link {
+      color: pink;
+    }
+  }
+}
