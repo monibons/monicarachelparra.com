@@ -1,2 +1,0 @@
-# monicarachelparra.com
-Portfolio Site
