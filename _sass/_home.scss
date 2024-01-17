@@ -102,6 +102,10 @@ body,
           padding-bottom: 16px;
           color: pink;
           border-bottom: 1px solid rgba(pink,.25);
+
+          @media (max-width: 500px) {
+            font-size: 15px;
+          }
   
           span {
             color: white;
@@ -165,11 +169,18 @@ body,
     -webkit-box-sizing: border-box;
     -ms-box-sizing: border-box;
 
+    @media (max-width: 500px) {
+      padding: 0 20px;
+    }
     .project {
       max-width: 1200px;
       padding: 80px 20px 40px 20px;
       margin: 0 auto;
       border-top: 1px solid rgba(255,255,255,.2);
+
+      @media (max-width: 500px) {
+        padding: 60px 0 40px 0;
+      }
 
       &.branding {
         max-width: 800px;
