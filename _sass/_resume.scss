@@ -1,6 +1,11 @@
 ul {
   padding: 20px 0;
-  width: auto;
+  min-width: 400px;
+
+  @media (max-width: 500px) {
+    padding: 10px 0;
+    min-width: 100%;
+  }
 
   li {
     color: white;
@@ -14,9 +19,8 @@ ul {
     transition: color .5s ease, padding .6s ease;
 
     &:hover {
-      color: #F5DAAA;
       padding: 12px 12px 14px 16px;
-      background: rgba(0,0,0,.08);
+      background: rgba(white,.05);
     }
 
     span {
