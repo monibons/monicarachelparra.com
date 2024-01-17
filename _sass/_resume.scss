@@ -1,0 +1,41 @@
+ul {
+  padding: 20px 0;
+  width: auto;
+
+  li {
+    color: white;
+    border-bottom: 1px solid rgba(255,255,255,.1);
+    border-radius: 2px;
+    font-size: 19px;
+    font-weight: 600;
+    list-style: none;
+    padding: 16px 12px 18px 0;
+    cursor: pointer;
+    transition: color .5s ease, padding .6s ease;
+
+    &:hover {
+      color: #F5DAAA;
+      padding: 12px 12px 14px 16px;
+      background: rgba(0,0,0,.08);
+    }
+
+    span {
+      font-size: 15px;
+      font-weight: 400;
+      color: $mp-mango;
+      margin-left: 2px;
+      padding: 8px 0;
+      display: block;
+    }
+  }
+}
+
+@keyframes hover-fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
