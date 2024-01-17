@@ -1,27 +1,30 @@
 .top-nav {
-
   background: rgb(137,14,255);
   background: linear-gradient(124deg, rgba(137,14,255,1) 0%, rgb(209, 29, 254) 100%);
-  padding: 20px;
+  padding: 10px;
 
   .nav-links {
     display: flex;  
     flex-wrap: nowrap;
 
     p {
-      color: white;
-      margin: 0 20px 0 0;
-      flex-grow: 2;
-      font-weight: 600;
-
       a {
-        text-decoration: none;
+        color: $mp-mango;
+        &:hover {
+          color: white;
+        }
       }
     }
   
     a {
       margin: 0 20px;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
       color: white;
+      text-decoration: none;
+      align-self: center;
     
       &:hover {
         color: pink;

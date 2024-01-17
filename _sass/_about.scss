@@ -1,7 +1,7 @@
 @import 'variables';
 
 .about {
-  padding: 80px 80px 120px 80px;
+  padding: 80px 80px 180px 80px;
   background: #180E2E;
   margin: 0;
   display: flex;
@@ -23,6 +23,10 @@
     h3 {
       font-size: 48px;
       color: white;
+
+      @media (max-width: 500px) {
+        font-size: 32px;
+      }
     }
 
     p {
@@ -35,6 +39,10 @@
         span {
           color: $mp-mango;
           font-weight: 400;  
+        }
+
+        @media (max-width: 500px) {
+          font-size: 19px;
         }
     }
 }
