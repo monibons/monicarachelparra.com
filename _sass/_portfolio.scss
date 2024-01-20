@@ -10,7 +10,7 @@
 
     h2 {
       color: $mp-mango;
-      font-size: 13px;
+      font-size: 11px;
       letter-spacing: 2px;
       text-transform: uppercase;
       font-weight: 700;
@@ -21,29 +21,18 @@
 
   p {
     color: white;
-    font-size: 15px;
-    padding: 20px 0 20px;
-    line-height: 27px;
+    font-size: 21px;
+    padding: 40px 0 20px 0;
+    line-height: 30px;
+    font-weight: 400;
 
     &.highlight {
       color: $mp-mango;
     }
   }
 
-  a {
-    position: relative;
-    display: block;
-    text-decoration: none;
-    color: #0653F4;
-    padding-bottom: 30px;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-
   h2, p {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
   }
 
@@ -55,16 +44,31 @@
     padding-top: 20px;
   }
 
+  img + h3 {
+    margin-top: 40px;
+    border-top: 1px solid rgba(white, .15);
+    padding-top: 80px;
+  }
+
   .no-wrap {
     max-width: 1600px;
     text-align: center;
     margin: 0 auto;
+    border-top: 1px solid rgba(white,.15);
+    padding-top: 60px;
+    
 
-    p {
+    h3 {
       color: pink;
       text-transform: uppercase;
       font-size: 11px;
       letter-spacing: 2px;
+    }
+    p{
+      font-size: 17px;
+      font-weight: 300;
+      color: #DBE4FF;
+      padding: 20px;
     }
   }
 
@@ -92,5 +96,9 @@
     width: 100%;
     margin: 0 auto;
     margin-bottom: 40px;
+  }
+
+ h3 + #player {
+    margin-top: 20px;
   }
 }
