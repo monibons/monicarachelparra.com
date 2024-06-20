@@ -174,9 +174,19 @@ body,
     }
     .project {
       max-width: 1200px;
-      padding: 80px 20px 40px 20px;
+      padding: 40px 20px 40px 20px;
       margin: 0 auto;
       border-top: 1px solid rgba(255,255,255,.2);
+
+      .logo {
+        width: 120px;
+        margin-bottom: 20px;
+
+        &-mc {
+          width: 60px;
+          margin-bottom: 20px;
+        }
+      }
 
       @media (max-width: 500px) {
         padding: 60px 0 40px 0;
