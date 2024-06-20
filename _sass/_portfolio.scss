@@ -8,6 +8,22 @@
   &-header {
     padding: 60px 0 40px 0;
 
+    .store-logos {
+      display: flex;
+      justify-content: center;
+
+      img {
+        width: 140px;
+        padding: 0 10px;
+
+        &.google-play {
+          width: 160px;
+          height: 41px;
+        }
+      }
+
+    }
+
     h2 {
       color: $mp-mango;
       font-size: 11px;
@@ -16,6 +32,13 @@
       font-weight: 700;
       padding: 0;
       margin: 0;
+    }
+    
+    small {
+      font-size: 15px;
+      margin: 40px 0;
+      display: block;
+      color: #97aade;
     }
   }
 
