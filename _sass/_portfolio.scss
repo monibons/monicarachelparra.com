@@ -79,7 +79,48 @@
     margin: 0 auto;
     border-top: 1px solid rgba(white,.15);
     padding-top: 60px;
-    
+
+    h2 {
+      padding-bottom: 40px;
+      font-weight: 400;
+    }
+
+    .thumbnail-grid {
+      display: grid;
+      gap: 40px;
+      margin: 0 auto;
+      padding-bottom: 100px;
+
+      &.default {
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+
+      }
+
+      &.vertical {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+        img {
+          border-radius: 40px;
+          padding: 0;
+        }
+      }
+
+      &.blender {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      }
+
+      &.default, .vertical, .blender {
+
+        img {
+          width: 100%;
+          height: auto;
+          display: block;
+          object-fit: cover;
+          margin-bottom: 0;
+          padding: 0;
+        }
+      }
+    }
 
     h3 {
       color: pink;
