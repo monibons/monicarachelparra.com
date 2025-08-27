@@ -1,0 +1,20 @@
+current directory: /Users/monicaparra/monicarachelparra.com/vendor/bundle/ruby/3.3.0/gems/eventmachine-1.2.7/ext/fastfilereader
+/opt/homebrew/opt/ruby@3.3/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/monicaparra/monicarachelparra.com/vendor/bundle/ruby/3.3.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make DESTDIR\= sitearchdir\=./.gem.20250826-61346-vh4gpl sitelibdir\=./.gem.20250826-61346-vh4gpl clean
+
+current directory: /Users/monicaparra/monicarachelparra.com/vendor/bundle/ruby/3.3.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make DESTDIR\= sitearchdir\=./.gem.20250826-61346-vh4gpl sitelibdir\=./.gem.20250826-61346-vh4gpl
+compiling mapper.cpp
+compiling rubymain.cpp
+linking shared-object fastfilereaderext.bundle
+ld: warning: dylib (/opt/homebrew/Cellar/ruby@3.3/3.3.9/lib/libruby.3.3.dylib) was built for newer macOS version (14.0) than being linked (13.3)
+
+current directory: /Users/monicaparra/monicarachelparra.com/vendor/bundle/ruby/3.3.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make DESTDIR\= sitearchdir\=./.gem.20250826-61346-vh4gpl sitelibdir\=./.gem.20250826-61346-vh4gpl install
+/usr/bin/install -c -m 0755 fastfilereaderext.bundle ./.gem.20250826-61346-vh4gpl
+
+current directory: /Users/monicaparra/monicarachelparra.com/vendor/bundle/ruby/3.3.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make DESTDIR\= sitearchdir\=./.gem.20250826-61346-vh4gpl sitelibdir\=./.gem.20250826-61346-vh4gpl clean
