@@ -1,15 +1,15 @@
 {
   "name": "Jekyll",
-  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
   "features": {
-    "ghcr.io/devcontainers/features/ruby:1": { "version": "3.2" }
+    "ghcr.io/devcontainers/features/ruby:1": { "version": "3.3" }
   },
-  "postCreateCommand": "bundle install",
+  "postCreateCommand": "gem install bundler && bundle config set path 'vendor/bundle' && bundle install",
   "forwardPorts": [4000],
   "portsAttributes": { "4000": { "label": "Jekyll" } },
   "customizations": {
     "vscode": {
-      "extensions": ["rebornix.Ruby", "octref.vetur"]
+      "extensions": ["rebornix.Ruby"]
     }
   }
 }
