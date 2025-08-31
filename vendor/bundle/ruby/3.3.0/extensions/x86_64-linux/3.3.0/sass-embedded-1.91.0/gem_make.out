@@ -1,0 +1,5 @@
+current directory: /workspaces/monicarachelparra.com/vendor/bundle/ruby/3.3.0/gems/sass-embedded-1.91.0/ext/sass
+/usr/local/rvm/rubies/ruby-3.3.9/bin/ruby -rrubygems /workspaces/monicarachelparra.com/vendor/bundle/ruby/3.3.0/gems/rake-13.3.0/exe/rake RUBYARCHDIR\=/workspaces/monicarachelparra.com/vendor/bundle/ruby/3.3.0/extensions/x86_64-linux/3.3.0/sass-embedded-1.91.0 RUBYLIBDIR\=/workspaces/monicarachelparra.com/vendor/bundle/ruby/3.3.0/extensions/x86_64-linux/3.3.0/sass-embedded-1.91.0
+gem install --force --install-dir /workspaces/monicarachelparra.com/vendor/bundle/ruby/3.3.0/gems/sass-embedded-1.91.0/ext/sass/ruby --no-document --ignore-dependencies --platform x86_64-linux-gnu --version 1.91.0 sass-embedded
+mv /workspaces/monicarachelparra.com/vendor/bundle/ruby/3.3.0/gems/sass-embedded-1.91.0/ext/sass/ruby/gems/sass-embedded-1.91.0-x86_64-linux-gnu/ext/sass/dart-sass dart-sass
+rm -rf /workspaces/monicarachelparra.com/vendor/bundle/ruby/3.3.0/gems/sass-embedded-1.91.0/ext/sass/ruby

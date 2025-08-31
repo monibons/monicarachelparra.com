@@ -23,7 +23,7 @@ Gem::Specification.new do |s|
   s.rubygems_version = "3.6.2".freeze
   s.summary = "Ruby FFI".freeze
 
-  s.installed_by_version = "3.7.1".freeze
+  s.installed_by_version = "3.5.22".freeze
 
   s.specification_version = 4
 

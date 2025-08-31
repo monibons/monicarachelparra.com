@@ -13,12 +13,12 @@ NULLCMD = :
 #### Start of system configuration section. ####
 
 srcdir = .
-topdir = /opt/homebrew/Cellar/ruby@3.3/3.3.9/include/ruby-3.3.0
+topdir = /usr/local/rvm/rubies/ruby-3.3.9/include/ruby-3.3.0
 hdrdir = $(topdir)
-arch_hdrdir = /opt/homebrew/Cellar/ruby@3.3/3.3.9/include/ruby-3.3.0/arm64-darwin23
+arch_hdrdir = /usr/local/rvm/rubies/ruby-3.3.9/include/ruby-3.3.0/x86_64-linux
 PATH_SEPARATOR = :
 VPATH = $(srcdir):$(arch_hdrdir)/ruby:$(hdrdir)/ruby:$(srcdir)/third_party/utf8_range
-prefix = $(DESTDIR)/opt/homebrew/Cellar/ruby@3.3/3.3.9
+prefix = $(DESTDIR)/usr/local/rvm/rubies/ruby-3.3.9
 rubysitearchprefix = $(rubylibprefix)/$(sitearch)
 rubyarchprefix = $(rubylibprefix)/$(arch)
 rubylibprefix = $(libdir)/$(RUBY_BASE_NAME)
@@ -31,10 +31,10 @@ sitehdrdir = $(rubyhdrdir)/site_ruby
 rubyhdrdir = $(includedir)/$(RUBY_VERSION_NAME)
 vendorarchdir = $(vendorlibdir)/$(sitearch)
 vendorlibdir = $(vendordir)/$(ruby_version)
-vendordir = $(DESTDIR)/opt/homebrew/lib/ruby/vendor_ruby
+vendordir = $(rubylibprefix)/vendor_ruby
 sitearchdir = $(sitelibdir)/$(sitearch)
 sitelibdir = $(sitedir)/$(ruby_version)
-sitedir = $(DESTDIR)/opt/homebrew/lib/ruby/site_ruby
+sitedir = $(rubylibprefix)/site_ruby
 rubyarchdir = $(rubylibdir)/$(arch)
 rubylibdir = $(rubylibprefix)/$(ruby_version)
 sitearchincludedir = $(includedir)/$(sitearch)
@@ -56,7 +56,7 @@ includedir = $(prefix)/include
 runstatedir = $(localstatedir)/run
 localstatedir = $(prefix)/var
 sharedstatedir = $(prefix)/com
-sysconfdir = $(prefix)/etc
+sysconfdir = $(DESTDIR)/etc
 datadir = $(datarootdir)
 datarootdir = $(prefix)/share
 libexecdir = $(exec_prefix)/libexec
@@ -66,47 +66,47 @@ archdir = $(rubyarchdir)
 
 
 CC_WRAPPER = 
-CC = clang
-CXX = clang++ -std=gnu++11
+CC = gcc
+CXX = g++
 LIBRUBY = $(LIBRUBY_SO)
 LIBRUBY_A = lib$(RUBY_SO_NAME)-static.a
-LIBRUBYARG_SHARED = -l$(RUBY_SO_NAME)
-LIBRUBYARG_STATIC = -l$(RUBY_SO_NAME)-static -framework CoreFoundation $(MAINLIBS)
+LIBRUBYARG_SHARED = -Wl,-rpath,'$${ORIGIN}/../lib' -Wl,-rpath,'$${ORIGIN}/../lib' -l$(RUBY_SO_NAME)
+LIBRUBYARG_STATIC = -Wl,-rpath,'$${ORIGIN}/../lib' -Wl,-rpath,'$${ORIGIN}/../lib' -l$(RUBY_SO_NAME)-static $(MAINLIBS)
 empty =
 OUTFLAG = -o $(empty)
 COUTFLAG = -o $(empty)
 CSRCFLAG = $(empty)
 
 RUBY_EXTCONF_H = 
-cflags   = -fdeclspec $(optflags) $(debugflags) $(warnflags)
+cflags   = $(optflags) $(debugflags) $(warnflags)
 cxxflags = 
 optflags = -O3 -fno-fast-math
 debugflags = -ggdb3
-warnflags = -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wmisleading-indentation -Wundef
+warnflags = -Wall -Wextra -Wdeprecated-declarations -Wdiv-by-zero -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wwrite-strings -Wold-style-definition -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wmisleading-indentation -Wundef
 cppflags = 
-CCDLFLAGS = -fno-common
-CFLAGS   = $(CCDLFLAGS) $(cflags) -fno-common -pipe -std=gnu99 -Wall -Wsign-compare -Wno-declaration-after-statement -O3 -DNDEBUG -fvisibility=hidden $(ARCH_FLAG)
+CCDLFLAGS = -fPIC
+CFLAGS   = $(CCDLFLAGS) $(cflags)  -fPIC -std=gnu99 -Wall -Wsign-compare -Wno-declaration-after-statement -O3 -DNDEBUG -fvisibility=hidden $(ARCH_FLAG)
 INCFLAGS = -I. -I$(arch_hdrdir) -I$(hdrdir)/ruby/backward -I$(hdrdir) -I$(srcdir) -I$(srcdir)/third_party/utf8_range
 DEFS     = 
-CPPFLAGS =  -I/opt/homebrew/opt/libyaml/include -I/opt/homebrew/opt/openssl@3/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT $(DEFS) $(cppflags)
-CXXFLAGS = $(CCDLFLAGS) -fdeclspec $(ARCH_FLAG)
-ldflags  = -L. -fstack-protector-strong -L/opt/homebrew/opt/libyaml/lib -L/opt/homebrew/opt/openssl@3/lib
-dldflags = -L/opt/homebrew/opt/libyaml/lib -L/opt/homebrew/opt/openssl@3/lib -Wl,-undefined,dynamic_lookup 
-ARCH_FLAG = -arch arm64
+CPPFLAGS =   $(DEFS) $(cppflags)
+CXXFLAGS = $(CCDLFLAGS)  $(ARCH_FLAG)
+ldflags  = -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed
+dldflags = -Wl,--compress-debug-sections=zlib 
+ARCH_FLAG = 
 DLDFLAGS = $(ldflags) $(dldflags) $(ARCH_FLAG)
-LDSHARED = $(CC) -dynamic -bundle
-LDSHAREDXX = $(CXX) -dynamic -bundle
-AR = ar
+LDSHARED = $(CC) -shared
+LDSHAREDXX = $(CXX) -shared
+AR = gcc-ar
 EXEEXT = 
 
 RUBY_INSTALL_NAME = $(RUBY_BASE_NAME)
-RUBY_SO_NAME = ruby.3.3
+RUBY_SO_NAME = ruby
 RUBYW_INSTALL_NAME = 
 RUBY_VERSION_NAME = $(RUBY_BASE_NAME)-$(ruby_version)
 RUBYW_BASE_NAME = rubyw
 RUBY_BASE_NAME = ruby
 
-arch = arm64-darwin23
+arch = x86_64-linux
 sitearch = $(arch)
 ruby_version = 3.3.0
 ruby = $(bindir)/$(RUBY_BASE_NAME)
@@ -116,9 +116,9 @@ ruby_headers = $(hdrdir)/ruby.h $(hdrdir)/ruby/backward.h $(hdrdir)/ruby/ruby.h 
 
 RM = rm -f
 RM_RF = rm -fr
-RMDIRS = rmdir -p
-MAKEDIRS = mkdir -p
-INSTALL = /usr/bin/install -c
+RMDIRS = rmdir --ignore-fail-on-non-empty -p
+MAKEDIRS = /usr/bin/mkdir -p
+INSTALL = /usr/bin/install
 INSTALL_PROG = $(INSTALL) -m 0755
 INSTALL_DATA = $(INSTALL) -m 644
 COPY = cp
@@ -127,8 +127,8 @@ TOUCH = exit >
 #### End of system configuration section. ####
 
 preload = 
-libpath = . $(libdir) /opt/homebrew/opt/libyaml/lib /opt/homebrew/opt/openssl@3/lib
-LIBPATH =  -L. -L$(libdir) -L/opt/homebrew/opt/libyaml/lib -L/opt/homebrew/opt/openssl@3/lib
+libpath = . $(libdir)
+LIBPATH =  -L. -L$(libdir) -Wl,-rpath,$(libdir)
 DEFFILE = 
 
 CLEANFILES = mkmf.log
@@ -139,7 +139,7 @@ extout =
 extout_prefix = 
 target_prefix = /google
 LOCAL_LIBS = 
-LIBS = $(LIBRUBYARG_SHARED)  -lpthread  
+LIBS = $(LIBRUBYARG_SHARED)  -lm -lpthread  -lc
 ORIG_SRCS = convert.c defs.c glue.c map.c message.c protobuf.c repeated_field.c ruby-upb.c shared_convert.c shared_message.c
 SRCS = $(ORIG_SRCS) protobuf.c convert.c defs.c message.c repeated_field.c map.c ruby-upb.c utf8_range.c shared_convert.c shared_message.c
 OBJS = protobuf.o convert.o defs.o message.o repeated_field.o map.o ruby-upb.o utf8_range.o shared_convert.o shared_message.o
@@ -148,7 +148,7 @@ LOCAL_HDRS =
 TARGET = protobuf_c
 TARGET_NAME = protobuf_c
 TARGET_ENTRY = Init_$(TARGET_NAME)
-DLLIB = $(TARGET).bundle
+DLLIB = $(TARGET).so
 EXTSTATIC = 
 STATIC_LIB = 
 
@@ -161,7 +161,7 @@ HDRDIR        = $(sitehdrdir)$(target_prefix)
 ARCHHDRDIR    = $(sitearchhdrdir)$(target_prefix)
 TARGET_SO_DIR =
 TARGET_SO     = $(TARGET_SO_DIR)$(DLLIB)
-CLEANLIBS     = $(TARGET_SO) $(TARGET_SO).dSYM
+CLEANLIBS     = $(TARGET_SO) false
 CLEANOBJS     = $(OBJS) *.bak
 TARGET_SO_DIR_TIMESTAMP = $(TIMESTAMP_DIR)/.sitearchdir.-.google.time
 
@@ -263,7 +263,6 @@ $(TARGET_SO): $(OBJS) Makefile
 	$(ECHO) linking shared-object google/$(DLLIB)
 	-$(Q)$(RM) $(@)
 	$(Q) $(LDSHARED) -o $@ $(OBJS) $(LIBPATH) $(DLDFLAGS) $(LOCAL_LIBS) $(LIBS)
-	$(Q) $(POSTLINK)
 
 
 

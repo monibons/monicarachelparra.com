@@ -1,0 +1,6 @@
+current directory: /workspaces/monicarachelparra.com/vendor/bundle/ruby/3.3.0/gems/google-protobuf-4.32.0/ext/google/protobuf_c
+/usr/local/rvm/rubies/ruby-3.3.9/bin/ruby -rrubygems /workspaces/monicarachelparra.com/vendor/bundle/ruby/3.3.0/gems/rake-13.3.0/exe/rake RUBYARCHDIR\=/workspaces/monicarachelparra.com/vendor/bundle/ruby/3.3.0/extensions/x86_64-linux/3.3.0/google-protobuf-4.32.0 RUBYLIBDIR\=/workspaces/monicarachelparra.com/vendor/bundle/ruby/3.3.0/extensions/x86_64-linux/3.3.0/google-protobuf-4.32.0
+Ignoring google-protobuf-4.32.0 because its extensions are not built. Try: gem pristine google-protobuf --version 4.32.0
+Ignoring google-protobuf-4.32.0 because its extensions are not built. Try: gem pristine google-protobuf --version 4.32.0
+Ignoring sass-embedded-1.91.0 because its extensions are not built. Try: gem pristine sass-embedded --version 1.91.0
+Skipping build of FFI; `gem install ffi-compiler` to enable.
