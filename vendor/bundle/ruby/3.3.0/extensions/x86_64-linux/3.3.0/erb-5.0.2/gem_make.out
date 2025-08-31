@@ -1,0 +1,19 @@
+current directory: /workspaces/monicarachelparra.com/vendor/bundle/ruby/3.3.0/gems/erb-5.0.2/ext/erb/escape
+/usr/local/rvm/rubies/ruby-3.3.9/bin/ruby extconf.rb
+checking for rb_ext_ractor_safe() in ruby.h... yes
+creating Makefile
+
+current directory: /workspaces/monicarachelparra.com/vendor/bundle/ruby/3.3.0/gems/erb-5.0.2/ext/erb/escape
+make DESTDIR\= sitearchdir\=./.gem.20250827-2214-2pozx2 sitelibdir\=./.gem.20250827-2214-2pozx2 clean
+
+current directory: /workspaces/monicarachelparra.com/vendor/bundle/ruby/3.3.0/gems/erb-5.0.2/ext/erb/escape
+make DESTDIR\= sitearchdir\=./.gem.20250827-2214-2pozx2 sitelibdir\=./.gem.20250827-2214-2pozx2
+compiling escape.c
+linking shared-object erb/escape.so
+
+current directory: /workspaces/monicarachelparra.com/vendor/bundle/ruby/3.3.0/gems/erb-5.0.2/ext/erb/escape
+make DESTDIR\= sitearchdir\=./.gem.20250827-2214-2pozx2 sitelibdir\=./.gem.20250827-2214-2pozx2 install
+/usr/bin/install -m 0755 escape.so ./.gem.20250827-2214-2pozx2/erb
+
+current directory: /workspaces/monicarachelparra.com/vendor/bundle/ruby/3.3.0/gems/erb-5.0.2/ext/erb/escape
+make DESTDIR\= sitearchdir\=./.gem.20250827-2214-2pozx2 sitelibdir\=./.gem.20250827-2214-2pozx2 clean

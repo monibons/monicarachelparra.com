@@ -1,0 +1,19 @@
+current directory: /workspaces/monicarachelparra.com/vendor/bundle/ruby/3.3.0/gems/stringio-3.1.7/ext/stringio
+/usr/local/rvm/rubies/ruby-3.3.9/bin/ruby extconf.rb
+checking for rb_io_mode_t in ruby/io.h... no
+creating Makefile
+
+current directory: /workspaces/monicarachelparra.com/vendor/bundle/ruby/3.3.0/gems/stringio-3.1.7/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20250827-2214-l452gh sitelibdir\=./.gem.20250827-2214-l452gh clean
+
+current directory: /workspaces/monicarachelparra.com/vendor/bundle/ruby/3.3.0/gems/stringio-3.1.7/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20250827-2214-l452gh sitelibdir\=./.gem.20250827-2214-l452gh
+compiling stringio.c
+linking shared-object stringio.so
+
+current directory: /workspaces/monicarachelparra.com/vendor/bundle/ruby/3.3.0/gems/stringio-3.1.7/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20250827-2214-l452gh sitelibdir\=./.gem.20250827-2214-l452gh install
+/usr/bin/install -m 0755 stringio.so ./.gem.20250827-2214-l452gh
+
+current directory: /workspaces/monicarachelparra.com/vendor/bundle/ruby/3.3.0/gems/stringio-3.1.7/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20250827-2214-l452gh sitelibdir\=./.gem.20250827-2214-l452gh clean

@@ -1,0 +1,19 @@
+current directory: /workspaces/monicarachelparra.com/vendor/bundle/ruby/3.3.0/gems/debug-1.11.0/ext/debug
+/usr/local/rvm/rubies/ruby-3.3.9/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /workspaces/monicarachelparra.com/vendor/bundle/ruby/3.3.0/gems/debug-1.11.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20250827-1381-kanv1y sitelibdir\=./.gem.20250827-1381-kanv1y clean
+
+current directory: /workspaces/monicarachelparra.com/vendor/bundle/ruby/3.3.0/gems/debug-1.11.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20250827-1381-kanv1y sitelibdir\=./.gem.20250827-1381-kanv1y
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.so
+
+current directory: /workspaces/monicarachelparra.com/vendor/bundle/ruby/3.3.0/gems/debug-1.11.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20250827-1381-kanv1y sitelibdir\=./.gem.20250827-1381-kanv1y install
+/usr/bin/install -m 0755 debug.so ./.gem.20250827-1381-kanv1y/debug
+
+current directory: /workspaces/monicarachelparra.com/vendor/bundle/ruby/3.3.0/gems/debug-1.11.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20250827-1381-kanv1y sitelibdir\=./.gem.20250827-1381-kanv1y clean
