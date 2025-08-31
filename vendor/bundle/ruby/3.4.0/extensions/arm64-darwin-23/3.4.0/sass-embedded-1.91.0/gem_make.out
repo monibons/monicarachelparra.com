@@ -1,0 +1,5 @@
+current directory: /Users/monicaparra/monicarachelparra.com/vendor/bundle/ruby/3.4.0/gems/sass-embedded-1.91.0/ext/sass
+/opt/homebrew/opt/ruby/bin/ruby -rrubygems /Users/monicaparra/monicarachelparra.com/vendor/bundle/ruby/3.4.0/gems/rake-13.3.0/exe/rake RUBYARCHDIR\=/Users/monicaparra/monicarachelparra.com/vendor/bundle/ruby/3.4.0/extensions/arm64-darwin-23/3.4.0/sass-embedded-1.91.0 RUBYLIBDIR\=/Users/monicaparra/monicarachelparra.com/vendor/bundle/ruby/3.4.0/extensions/arm64-darwin-23/3.4.0/sass-embedded-1.91.0
+gem install --force --install-dir /Users/monicaparra/monicarachelparra.com/vendor/bundle/ruby/3.4.0/gems/sass-embedded-1.91.0/ext/sass/ruby --no-document --ignore-dependencies --platform arm64-darwin --version 1.91.0 sass-embedded
+mv /Users/monicaparra/monicarachelparra.com/vendor/bundle/ruby/3.4.0/gems/sass-embedded-1.91.0/ext/sass/ruby/gems/sass-embedded-1.91.0-arm64-darwin/ext/sass/dart-sass dart-sass
+rm -rf /Users/monicaparra/monicarachelparra.com/vendor/bundle/ruby/3.4.0/gems/sass-embedded-1.91.0/ext/sass/ruby
